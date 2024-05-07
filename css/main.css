@@ -1,0 +1,942 @@
+/* Base */
+/* ----------------------------------------------------------*/
+
+/*!
+ * The socicon font - credits to http://socicon.com
+ */
+@font-face {
+  font-family: "socicon";
+  src: url("../font/socicon-webfont.eot");
+  src: url("../font/socicon-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../font/socicon-webfont.woff") format("woff"),
+    url("../font/socicon-webfont.ttf") format("truetype"),
+    url("../font/socicon-webfont.svg#sociconregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* eine klasse welche den FONT hält! */
+.socialicons .socicon {
+  font-family: "socicon" !important;
+  color: #fff;
+
+  position: absolute;
+  top: 5px;
+  left: 8px;
+}
+/* drum herum ein div container welchen wir kreisrund machen... */
+.socialicons .socicon-wrap {
+  display: inline-block;
+  position: relative;
+  background-color: #ddd;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.socialicons a {
+  display: block;
+  /* wir müssen hier auch w/h vergeben damit alles ein *klickbarer* link ist */
+  width: 30px;
+  height: 30px;
+}
+/*.socialicons a,
+.socialicons a:hover,
+.socialicons a:visited,
+.socialicons a:active {
+  color: #fff;
+}
+*/
+
+/*custom background colors*/
+.socialicons .twitter:hover {
+  background-color: #00aced;
+}
+.socialicons .linkedin:hover {
+  background-color: #0077b5;
+}
+.socialicons .linkedin .socicon {
+  margin-top: -2px;
+}
+.socialicons .github:hover {
+  background-color: #333; /*#4183c4;*/
+}
+.socialicons .xing:hover {
+  background-color: #006567;
+}
+.socialicons .rss:hover {
+  background-color: #ff8300;
+}
+
+.js #hello-world {
+  display: none;
+}
+/*.no-js .twitter-follow,
+.js    .twitter-follow {
+  visibility: hidden;
+}*/
+
+.responsive-video {
+  position: relative;
+  padding-bottom: 56.25%; /* Default for 1600x900 videos 16:9 ratio*/
+  padding-top: 0px;
+  height: 0;
+  overflow: hidden;
+}
+.responsive-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.6; /**** line-height: 1.5  oder 22px; ****/
+  background-color: #fff;
+  color: #444;
+}
+
+/* custom font: naah looks good... tom? im head einbinden!
+h1, h2, h3, h4, h5, h6, p, em, blockquote, small, strong, a {
+  font-family: Open Sans, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  font-size: 100%;
+  font-weight: 300;
+  margin: 15px 0;
+}
+h1 {
+  font-size: 28px;
+}
+h2 {
+  font-size: 22px;
+}
+h3 {
+  font-size: 19px;
+}
+h4 {
+  font-size: 17px;
+}
+h5 {
+  font-size: 15px;
+}
+h6 {
+  font-size: 13px;
+}
+
+h2 small {
+  float: right;
+  font-size: 10px;
+  color: #999;
+  margin: 15px 0 0 0;
+  font-weight: 300 !important;
+}
+
+p {
+  margin: 15px 0;
+}
+
+/* blaue links:
+a         { color: #2a7ae2; text-decoration: none; }
+a:hover   { color: #333; }
+a:visited { color: #205caa; }
+*/
+
+/* html5 links */
+a {
+  color: #f16529;
+  text-decoration: none;
+}
+/*a:hover   { color: #333; text-decoration: underline; }*/
+/*a:visited { color: #e44d26; } weglassen oder richtig deutlich (rot sieht nich gut aus)*/
+
+/*#layout {}*/
+/*border-top: 5px solid #f16529;*/ /**  html5 color orange: dunkel #e44d26 oder hell #f16529 alt: #333 */
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #f8f8f8;
+  text-shadow: none;
+}
+::selection {
+  background: #f8f8f8;
+  text-shadow: none;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 30px 0;
+}
+
+/* Utility */
+.center {
+  text-align: center;
+}
+
+/* some box shadow for images */
+img.shadow {
+  box-shadow: 3px 3px 5px #888;
+}
+
+/* TODO scale via gimp!
+img.project-thumb {
+  max-width: 200px;
+  max-height: 200px;
+  margin: 0 auto;
+  display: block;
+}*/
+
+/*
+.wrap:before,
+.wrap:after { content:""; display:table; }
+.wrap:after { clear: both; }
+.wrap {
+
+}
+footer .wrap {
+  /*margin: 0 auto;
+}*/
+
+.twitter-follow-button {
+  cursor: pointer;
+}
+.twitter-folow-post {
+  margin: 30px 0;
+  text-align: center;
+}
+
+/**
+ * No support for IE <= 8
+ * (-;
+ */
+#old-ie-message {
+  background-color: red;
+  color: #fff;
+  font-size: 20px;
+}
+#old-ie-message a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/**
+ * Buttons
+ * @see purecss.io
+ */
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary,
+.button-mwa {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.button-success {
+  background: rgb(28, 184, 65); /* this is a green */
+}
+.button-error {
+  background: rgb(202, 60, 60); /* this is a maroon */
+}
+.button-warning {
+  background: rgb(223, 117, 20); /* this is an orange */
+}
+.button-secondary {
+  background: rgb(66, 184, 221); /* this is a light blue */
+}
+.button-mwa {
+  background: #f16529;
+}
+
+/* Layout Styles */
+/* ----------------------------------------------------------*/
+
+/* Sitebar */
+
+.sidebar {
+  /*background: rgb(61, 79, 93);*/
+  background-color: #f8f8f8; /* old: #fdfdfd; */
+  border-bottom: 1px solid #e8e8e8; /*#e8e8e8*/
+  text-align: center;
+  border-top: 5px solid #f16529;
+}
+.sidebar .main-link {
+  display: inline-block;
+  margin: 0 auto;
+  text-decoration: none;
+}
+.sidebar h1 {
+  font-size: 1.5em;
+  display: inline-block;
+  color: #999;
+  /*width: 9em;*/
+  text-align: left;
+  overflow: hidden;
+  margin: 0;
+  padding-top: 9px;
+  vertical-align: middle;
+}
+.sidebar .twitter-follow {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.sidebar .links {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.7em;
+  padding-top: 5px;
+}
+
+.sidebar .links a {
+  display: inline-block;
+  margin: 0 auto;
+  text-decoration: none;
+  margin-top: 0.4em;
+  padding: 0.4em 0.4em;
+}
+
+/**
+ * Selfies
+ */
+.selfie-main {
+  border-radius: 50%;
+  max-width: 50px;
+  float: left;
+  margin-right: 0.5em;
+}
+.selfie-main2 {
+  border-radius: 50%;
+  max-width: 200px;
+}
+.selfie-about {
+  border-radius: 10px;
+  max-width: 600px !important;
+  /*float: left;*/
+  margin: 7px;
+  padding: 3px;
+}
+@media screen and (max-width: 600px) {
+  .selfie-about {
+    max-width: 300px !important;
+  }
+}
+
+/* Site footer */
+
+.site-footer {
+  padding: 1em 0;
+}
+.site-footer hr {
+  margin: 0;
+}
+.site-footer .pure-menu a:hover,
+.site-footer .pure-menu a:focus {
+  background: none;
+}
+
+.site-footer .imprint {
+  float: right;
+}
+
+.site-footer li,
+.site-footer p {
+  font-size: 15px;
+  letter-spacing: -0.3px;
+  color: #828282;
+}
+
+.footer-inner {
+  margin-top: 20px;
+}
+
+/* Page Content styles */
+/* ----------------------------------------------------------*/
+
+/* Home styles */
+/* ----------------------------------------------------------*/
+
+.home h1 {
+  margin-bottom: 25px;
+}
+
+/* we have h2s with links inside for more semantic */
+.home .post-headline {
+  font-size: 16px;
+  text-transform: none;
+}
+
+/* max width */
+.post-header h1,
+.post-description p,
+.project-content p,
+.project-content blockquote,
+.post-content p,
+.post-content blockquote,
+.post-content .highlight pre {
+  max-width: 740px;
+}
+
+.home .post-container {
+  /*border:1px solid #ddd;
+  border-radius: 5px;*/
+  margin: 30px 0px;
+  padding: 0px;
+}
+.home .post.featured {
+  background-color: #2d2d2d;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 30px 0 70px 0;
+}
+.home .post.featured p {
+  color: #f8f8f8;
+}
+/* also used on project pages! */
+.post-date {
+  color: #999;
+}
+.home .post-date {
+  float: right;
+  margin-left: 1em;
+  font-size: 85%;
+  margin: 0;
+}
+
+/* Post styles */
+/* ----------------------------------------------------------*/
+
+.post-header .meta {
+  font-size: 15px;
+  color: #999;
+  margin-top: 5px;
+}
+
+.post-content {
+  margin: 0 0 30px;
+}
+
+.post-content > * {
+  margin: 20px 0;
+}
+
+.project-content img,
+.post-content img,
+.page-content img {
+  display: block;
+  margin: 40px auto;
+  max-width: 80%;
+}
+
+.home .post-container img {
+  display: block;
+  margin: 40px auto;
+  max-width: 40%;
+}
+.post-content .image-cap,
+.page-content .image-cap {
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  line-height: 1;
+  font-weight: 300;
+  margin: 40px 0 20px;
+}
+
+.post-content blockquote {
+  border-left: 4px solid #e8e8e8;
+  padding-left: 20px;
+  font-size: 18px;
+  opacity: 0.6;
+  letter-spacing: -1px;
+  font-style: italic;
+  margin: 30px 0;
+}
+
+.post-content ul,
+.post-content ol {
+  padding-left: 20px;
+}
+
+/*default:*/
+.post pre {
+  white-space: pre;
+  word-wrap: normal;
+  overflow-x: auto;
+}
+.post pre,
+.post code {
+  border: 1px solid #d5d5e9;
+  background-color: #eef;
+  padding: 8px 12px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+/* solarized theme fake: */
+.post .highlight pre,
+.post .highlight code {
+  background-color: #002b36;
+  color: #879696;
+  border: none;
+}
+/*comments*/
+.post .highlight code .cm,
+.post .highlight code .cp,
+.post .highlight code .c1,
+.post .highlight code .cs {
+  color: #546d57;
+}
+/*functions*/
+.post .highlight code .kd {
+  color: #278bd2;
+}
+/*strings*/
+.post .highlight code .s1 {
+  color: #1f9796;
+}
+
+.post code {
+  padding: 1px 0;
+}
+
+.post ul,
+.post ol {
+  margin-left: 1.35em;
+}
+
+.post pre code {
+  border: none;
+}
+
+/* terminal */
+.post pre.terminal {
+  border: 1px solid #000;
+  background-color: #333;
+  color: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.post pre.terminal code {
+  background-color: #333;
+}
+
+/* Syntax highlighting styles */
+/* ----------------------------------------------------------*/
+
+.highlight {
+  background: #ffffff;
+}
+.highlight .c {
+  color: #999988;
+  font-style: italic;
+} /* Comment */
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+} /* Error */
+.highlight .k {
+  font-weight: bold;
+} /* Keyword */
+.highlight .o {
+  font-weight: bold;
+} /* Operator */
+.highlight .cm {
+  color: #999988;
+  font-style: italic;
+} /* Comment.Multiline */
+.highlight .cp {
+  color: #999999;
+  font-weight: bold;
+} /* Comment.Preproc */
+.highlight .c1 {
+  color: #999988;
+  font-style: italic;
+} /* Comment.Single */
+.highlight .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+} /* Comment.Special */
+.highlight .gd {
+  color: #000000;
+  background-color: #ffdddd;
+} /* Generic.Deleted */
+.highlight .gd .x {
+  color: #000000;
+  background-color: #ffaaaa;
+} /* Generic.Deleted.Specific */
+.highlight .ge {
+  font-style: italic;
+} /* Generic.Emph */
+.highlight .gr {
+  color: #aa0000;
+} /* Generic.Error */
+.highlight .gh {
+  color: #999999;
+} /* Generic.Heading */
+.highlight .gi {
+  color: #000000;
+  background-color: #ddffdd;
+} /* Generic.Inserted */
+.highlight .gi .x {
+  color: #000000;
+  background-color: #aaffaa;
+} /* Generic.Inserted.Specific */
+.highlight .go {
+  color: #888888;
+} /* Generic.Output */
+.highlight .gp {
+  color: #555555;
+} /* Generic.Prompt */
+.highlight .gs {
+  font-weight: bold;
+} /* Generic.Strong */
+.highlight .gu {
+  color: #aaaaaa;
+} /* Generic.Subheading */
+.highlight .gt {
+  color: #aa0000;
+} /* Generic.Traceback */
+.highlight .kc {
+  font-weight: bold;
+} /* Keyword.Constant */
+.highlight .kd {
+  font-weight: bold;
+} /* Keyword.Declaration */
+.highlight .kp {
+  font-weight: bold;
+} /* Keyword.Pseudo */
+.highlight .kr {
+  font-weight: bold;
+} /* Keyword.Reserved */
+.highlight .kt {
+  color: #445588;
+  font-weight: bold;
+} /* Keyword.Type */
+.highlight .m {
+  color: #009999;
+} /* Literal.Number */
+.highlight .s {
+  color: #d14;
+} /* Literal.String */
+.highlight .na {
+  color: #008080;
+} /* Name.Attribute */
+.highlight .nb {
+  color: #0086b3;
+} /* Name.Builtin */
+.highlight .nc {
+  color: #445588;
+  font-weight: bold;
+} /* Name.Class */
+.highlight .no {
+  color: #008080;
+} /* Name.Constant */
+.highlight .ni {
+  color: #800080;
+} /* Name.Entity */
+.highlight .ne {
+  color: #990000;
+  font-weight: bold;
+} /* Name.Exception */
+.highlight .nf {
+  color: #990000;
+  font-weight: bold;
+} /* Name.Function */
+.highlight .nn {
+  color: #555555;
+} /* Name.Namespace */
+.highlight .nt {
+  color: #5b5bd7;
+} /* Name.Tag */
+.highlight .nv {
+  color: #008080;
+} /* Name.Variable */
+.highlight .ow {
+  font-weight: bold;
+} /* Operator.Word */
+.highlight .w {
+  color: #bbbbbb;
+} /* Text.Whitespace */
+.highlight .mf {
+  color: #009999;
+} /* Literal.Number.Float */
+.highlight .mh {
+  color: #009999;
+} /* Literal.Number.Hex */
+.highlight .mi {
+  color: #009999;
+} /* Literal.Number.Integer */
+.highlight .mo {
+  color: #009999;
+} /* Literal.Number.Oct */
+.highlight .sb {
+  color: #d14;
+} /* Literal.String.Backtick */
+.highlight .sc {
+  color: #d14;
+} /* Literal.String.Char */
+.highlight .sd {
+  color: #d14;
+} /* Literal.String.Doc */
+.highlight .s2 {
+  color: #d14;
+} /* Literal.String.Double */
+.highlight .se {
+  color: #d14;
+} /* Literal.String.Escape */
+.highlight .sh {
+  color: #d14;
+} /* Literal.String.Heredoc */
+.highlight .si {
+  color: #d14;
+} /* Literal.String.Interpol */
+.highlight .sx {
+  color: #d14;
+} /* Literal.String.Other */
+.highlight .sr {
+  color: #009926;
+} /* Literal.String.Regex */
+.highlight .s1 {
+  color: #d14;
+} /* Literal.String.Single */
+.highlight .ss {
+  color: #990073;
+} /* Literal.String.Symbol */
+.highlight .bp {
+  color: #999999;
+} /* Name.Builtin.Pseudo */
+.highlight .vc {
+  color: #008080;
+} /* Name.Variable.Class */
+.highlight .vg {
+  color: #008080;
+} /* Name.Variable.Global */
+.highlight .vi {
+  color: #008080;
+} /* Name.Variable.Instance */
+.highlight .il {
+  color: #009999;
+} /* Literal.Number.Integer.Long */
+
+/* media queries */
+/* ----------------------------------------------------------*/
+
+@media screen and (max-width: 600px) {
+  /*.home .post-date {
+    float:none;
+    margin-top: 3px;
+    font-size: 11px;
+  }*/
+}
+
+/** purecss-blog example -> blog.css **/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h3 {
+  font-weight: 100;
+}
+
+/* LAYOUT CSS */
+.pure-img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+#layout {
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  top: auto;
+  margin: 3em auto;
+}
+
+.brand-title,
+.brand-tagline {
+  margin: 0;
+}
+.brand-title {
+  text-transform: uppercase;
+}
+.brand-tagline {
+  font-weight: 300;
+  color: rgb(176, 202, 219);
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav-item {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+.nav-item a {
+  background: transparent;
+  border: 2px solid rgb(176, 202, 219);
+  color: #fff;
+  margin-top: 1em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 85%;
+}
+.nav-item a:hover,
+.nav-item a:focus {
+  border: 2px solid rgb(61, 146, 201);
+  text-decoration: none;
+}
+
+.content-subhead {
+  text-transform: uppercase;
+  color: #aaa;
+  border-bottom: 1px solid #eee;
+  padding: 0.4em 0;
+  font-size: 80%;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.content {
+  padding: 2em 1em 0;
+}
+
+.post {
+  padding-bottom: 2em;
+}
+.post-title {
+  font-size: 2em;
+  color: #222;
+  margin-bottom: 0.2em;
+}
+.post-avatar {
+  border-radius: 50px;
+  float: right;
+  margin-left: 1em;
+}
+
+.post-category {
+  margin: 0 0.1em;
+  padding: 0.3em 1em;
+  color: #fff;
+  background: #999;
+  font-size: 80%;
+}
+.post-category-design {
+  background: #5aba59;
+}
+.post-category-pure {
+  background: #4d85d1;
+}
+.post-category-yui {
+  background: #8156a7;
+}
+.post-category-js {
+  background: #df2d4f;
+}
+
+.post-images {
+  margin: 1em 0;
+}
+.post-image-meta {
+  margin-top: -3.5em;
+  margin-left: 1em;
+  color: #fff;
+  text-shadow: 0 1px 1px #333;
+}
+
+/* small screens */
+@media (max-width: 48em) {
+  img.test-your-shit {
+    max-width: 300px;
+  }
+  iframe.test-your-shit-iframe {
+    /* TODO cutted... max-width: 300px !important;*/
+  }
+}
+
+/* big screens: */
+@media (min-width: 48em) {
+  img.test-your-shit {
+    max-width: 500px;
+  }
+
+  .content {
+    padding: 2em 3em 0;
+    margin-left: 25%;
+    max-width: 970px;
+  }
+
+  .header {
+    margin: 55px 2em 0;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    border-top: 0px;
+    border-bottom: 0px;
+  }
+  .sidebar .nav {
+    margin-top: 15px;
+  }
+  .sidebar h1 {
+    font-size: 1em;
+    text-align: center;
+    display: block;
+  }
+  .sidebar .selfie-main {
+    float: none;
+  }
+
+  .socialicons .socicon-wrap {
+    margin-right: 0px;
+  }
+}

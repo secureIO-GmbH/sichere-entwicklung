@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html class="no-js" lang="de">
+  <!--
+    So you wanna see the sources, eh?
+    Check out https://github.com/mwager/mwager.github.io
+  -->
+  {% include head.html %}
+
+    <body>
+      <div id="layout" class="pure-g">
+        {% include header.html %}
+
+        <div class="content pure-u-1 pure-u-med-3-4">
+          <div>
+          {{ content }}
+
+          {% include footer.html %}
+          </div>
+        </div>
+      </div>
+
+
+		<!-- Twitter follow buttons -->
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+    </body>
+</html>

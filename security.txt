@@ -1,0 +1,2 @@
+Contact: mailto:mail@mwager.de
+Encryption: https://mwager.de/assets/mwager.asc
