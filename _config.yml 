@@ -1,0 +1,38 @@
+title: Sichere Entwicklung
+email: michael.wager@secure-io.de
+description: >- # this means to ignore newlines until "baseurl:"
+  Eine Einführung in sicheres Programmieren und AppSec.
+keywords: "javascript typescript nodejs php software engineering germany augsburg münchen munich fullstack web developer frontend backend security forensics cyber cybersecurity linux hacking container distroless appsec devsecops devops cloud native"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+# source: ./
+
+# some globals:
+street: Ainmillerstr. 22
+address: 80801 München
+
+# Build settings
+# markdown: (kramdown or redcarpet?)
+permalink: pretty
+
+# custom ...
+highlighter: pygments
+timezone: Europe/Berlin
+
+# NOTE: github overwrites this to true, so we can use it as "production" env flag:
+safe: false
+
+lsi: false
+
+# https://stackoverflow.com/questions/30625044/jekyll-post-not-generated
+future: true
+
+# exclude file while running "jekyll build"
+# NOTE: .htaccess manually
+exclude: [_.*, package.json, README.md, readme.md]
