@@ -34,12 +34,12 @@ jobs:
     steps:
       - name: Test
         run: |
-          ls -la .site/
+          ls -la _site/
       - name: Download Build Artifacts
         uses: actions/download-artifact@v3
         with:
           name: build-artifacts
-          path: .site
+          path: _site
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -49,7 +49,7 @@ jobs:
         run: aws s3 rm s3://${{ secrets.AWS_S3_BUCKET }} --recursive
       - name: Upload to S3 bucket
         run: |
-          ls -la .site/
-          aws s3 cp .site/. s3://${{ secrets.AWS_S3_BUCKET }} --recursive
+          ls -la _site
+          aws s3 cp _site/. s3://${{ secrets.AWS_S3_BUCKET }} --recursive
       - name: Clean CloudFront Cache
         run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
