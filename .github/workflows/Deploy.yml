@@ -28,7 +28,7 @@ jobs:
         env:
           JEKYLL_ENV: production
       - name: Upload artifact
-          # Automatically uploads an artifact from the './_site' directory by default
+        # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
 
   aws_deploy:
@@ -37,7 +37,7 @@ jobs:
     steps:
       - name: Test
         run: |
-          ls -la _site/
+          ls -la .
       - name: Download Build Artifacts
         uses: actions/download-artifact@v3
         with:
