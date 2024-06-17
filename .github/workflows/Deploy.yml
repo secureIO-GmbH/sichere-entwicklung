@@ -37,7 +37,8 @@ jobs:
     steps:
       - name: Test
         run: |
-          ls -la .
+          pwd
+          ls -la ..
       - name: Download Build Artifacts
         uses: actions/download-artifact@v3
         with:
