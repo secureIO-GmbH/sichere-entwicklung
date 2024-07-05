@@ -24,7 +24,6 @@ Im Folgenden findest Du eine visuelle Darstellung des SSDLC-Prozesses:
 
 Um tiefer in die einzelnen Phasen des SSDLC einzutauchen, besuche bitte die folgenden Ressourcen:
 
-- [OWASP Secure Software Development Life Cycle Project](https://owasp.org/www-project-secure-software-development-life-cycle/)
 - [NIST Secure Software Development Framework](https://csrc.nist.gov/publications/detail/sp/800-218/final)
 - [Microsoft Security Development Lifecycle](https://www.microsoft.com/en-us/securityengineering/sdl)
 
