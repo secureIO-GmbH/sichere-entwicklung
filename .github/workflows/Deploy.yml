@@ -26,7 +26,7 @@ jobs:
         run: |
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
           pwd
-          ls -lahu ..
+          ls -lahu ./sichere-entwicklung/
         env:
           JEKYLL_ENV: production
       - name: Upload artifact
@@ -40,7 +40,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build-artifacts
-          path: _site
+          path: ./
       - name: Test
         run: |
           pwd
