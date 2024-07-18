@@ -65,6 +65,8 @@
 .socialicons .xing:hover {
   background-color: #006567;
 }
+
+/* TODO: secIO color!!!!!!!!!!!!! */
 .socialicons .rss:hover {
   background-color: #ff8300;
 }
@@ -162,7 +164,8 @@ a:visited { color: #205caa; }
 
 /* html5 links */
 a {
-  color: #f16529;
+  /* TODO: secIO color!!!!!!!!!!!!! */
+  color: #1a8a8b;
   text-decoration: none;
 }
 /*a:hover   { color: #333; text-decoration: underline; }*/
@@ -269,7 +272,7 @@ footer .wrap {
   background: rgb(66, 184, 221); /* this is a light blue */
 }
 .button-mwa {
-  background: #f16529;
+  background: #1a8a8b;
 }
 
 /* Layout Styles */
@@ -282,7 +285,7 @@ footer .wrap {
   background-color: #f8f8f8; /* old: #fdfdfd; */
   border-bottom: 1px solid #e8e8e8; /*#e8e8e8*/
   text-align: center;
-  border-top: 5px solid #f16529;
+  border-top: 5px solid #1a8a8b;
 }
 .sidebar .main-link {
   display: inline-block;
