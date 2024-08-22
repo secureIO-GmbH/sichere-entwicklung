@@ -1,65 +1,135 @@
 ---
 layout: default
-title: "Einführung in SAST und SCA: Sicherheitsanalyse von Code und Abhängigkeiten"
+title: "SAST, SCA und Secret Scanning: Ein Überblick mit Codebeispielen"
 date: 2024-07-19
-categories: security
+categories: [security, devops]
 author: Michael Wager
+tags: [sast, sca, security-scanning, secret-scanning]
 ---
 
-## Einführung
+# SAST, SCA und Secret Scanning: Ein Überblick mit Codebeispielen
 
-Zwei wichtige Methoden zur Sicherstellung der Sicherheit sind **SAST** (Static Application Security Testing) und **SCA** (Software Composition Analysis).
+In der heutigen Entwicklungswelt sind Sicherheitslücken ein ernstes Problem. Zwei weit verbreitete Ansätze zur Verbesserung der Code-Sicherheit sind *Static Application Security Testing* (SAST) und *Software Composition Analysis* (SCA). Zusätzlich gewinnt das Secret Scanning immer mehr an Bedeutung. In diesem Beitrag werfen wir einen Blick auf diese drei Ansätze und liefern Codebeispiele, die veranschaulichen, wie Sicherheitslücken und Schwachstellen erkannt werden können.
 
-- **SAST** ist eine Methode zur Analyse von Quellcode auf Sicherheitslücken, ohne dass der Code ausgeführt wird. Dies ermöglicht es Entwicklern, Schwachstellen frühzeitig im Entwicklungsprozess zu erkennen und zu beheben. Ein SAST Tool durchsucht Quellcode nach Mustern, die auf potenzielle Sicherheitslücken hinweisen.
-- **SCA** hingegen konzentriert sich auf die Analyse von Drittanbieter-Bibliotheken und Abhängigkeiten, die in einer Anwendung verwendet werden. Dabei wird überprüft, ob bekannte Sicherheitslücken in den verwendeten Abhängigkeiten existieren.
+## SAST (Static Application Security Testing)
 
-## Beispiel für SAST
+SAST untersucht den Quellcode einer Anwendung auf Sicherheitslücken. Diese Analyse erfolgt statisch, d. h. ohne dass die Anwendung tatsächlich ausgeführt wird. Typische Probleme, die SAST erkennen kann, sind SQL-Injection, XSS (Cross-Site Scripting) und unsichere Zugriffskontrollen.
 
-SAST-Tools analysieren den Quellcode und identifizieren potenzielle Schwachstellen. Hier ein einfaches Beispiel in Python:
+### Beispiel 1: SQL-Injection
 
 ```python
-def get_user_input():
-    return input("Enter something: ")
-
-def print_user_input():
-    user_input = get_user_input()
-    print("User input: " + user_input)
-
-print_user_input()
+def get_user_data(user_id):
+    query = "SELECT * FROM users WHERE id = '" + user_id + "'"
+    db.execute(query)
 ```
 
-In diesem Beispiel könnte ein SAST-Tool wie Semgrep eine Warnung ausgeben, dass die Eingabe des Benutzers ohne Validierung oder Sanitisierung direkt ausgegeben wird, was zu Sicherheitsproblemen wie Command Injection führen kann.
+#### Erklärung
+In diesem Code wird der Benutzerinput `user_id` direkt in die SQL-Abfrage eingebettet, was ihn anfällig für SQL-Injection-Angriffe macht. Ein SAST-Tool erkennt dieses Muster, da es auf unsichere SQL-Konstrukte prüft, bei denen der Benutzerinput nicht ordnungsgemäß validiert wird.
 
-## Beispiel für SCA
+### Beispiel 2: Unsicherer Zugriff auf Dateien
 
-SCA-Tools analysieren die verwendeten Abhängigkeiten und deren bekannte Sicherheitslücken. Hier ein Beispiel einer package.json-Datei für ein Node.js-Projekt:
+```java
+public void readFile(String fileName) {
+    File file = new File(fileName);
+    BufferedReader reader = new BufferedReader(new FileReader(file));
+}
+```
+
+#### Erklärung
+Dieser Code öffnet eine Datei, die vom Benutzer angegeben wurde, ohne eine Sicherheitsprüfung durchzuführen. Ein SAST-Tool wird hier eine potenzielle Schwachstelle erkennen, da ein Angreifer möglicherweise beliebige Dateien lesen kann, einschließlich sensibler Dateien.
+
+### Beispiel 3: Harte Kodierung von Passwörtern
+
+```javascript
+const dbPassword = "mySecretPassword123";
+```
+
+#### Erklärung
+SAST-Tools erkennen harte Kodierung von Geheimnissen wie Passwörter oder API-Schlüssel im Quellcode. Dies stellt ein Sicherheitsrisiko dar, da hart kodierte Geheimnisse leicht extrahiert werden können.
+
+## SCA (Software Composition Analysis)
+
+SCA befasst sich mit den Abhängigkeiten einer Anwendung. Die meisten modernen Anwendungen nutzen externe Bibliotheken und Pakete, die wiederum Sicherheitslücken enthalten können. SCA-Tools analysieren diese Abhängigkeiten und vergleichen sie mit bekannten Schwachstellen-Datenbanken.
+
+### Beispiel 1: Veraltete Bibliotheken
 
 ```json
 {
-  "name": "my-project",
-  "version": "1.0.0",
   "dependencies": {
-    "express": "^4.17.1",
-    "lodash": "^4.17.20"
+    "express": "3.0.0"
   }
 }
 ```
 
-SCA-Tools wie `npm audit` können genutzt werden, um bekannte Schwachstellen in den Abhängigkeiten zu finden. Der Befehl prüft die Abhängigkeiten und gibt eine Liste von bekannten Sicherheitslücken aus, die in den verwendeten Versionen der Bibliotheken gefunden wurden.
+#### Erklärung
+Hier wird eine veraltete Version von `express` verwendet, die möglicherweise bekannte Sicherheitslücken aufweist. Ein SCA-Tool wie OWASP Dependency-Check oder GitHub Dependabot würde diese Abhängigkeit identifizieren und eine Warnung ausgeben.
 
-Nützliche Tools
+### Beispiel 2: Verwundbare Abhängigkeit
 
-Es gibt viele Tools, die sowohl SAST als auch SCA unterstützen. Hier sind einige der bekanntesten:
+```xml
+<dependency>
+  <groupId>org.apache.struts</groupId>
+  <artifactId>struts2-core</artifactId>
+  <version>2.3.1</version>
+</dependency>
+```
 
-- [Semgrep](https://semgrep.dev/): Ein einfach zu konfigurierendes SAST-Tool, das verschiedene Programmiersprachen unterstützt.
-- [Snyk](https://snyk.io/): Ein umfassendes Sicherheits-Tool, das sowohl SAST als auch SCA bietet und eine einfache Integration in CI/CD-Pipelines ermöglicht.
-- [npm audit](https://docs.npmjs.com/cli/v7/commands/npm-audit): Ein SCA-Tool für Node.js, das Abhängigkeiten auf bekannte Sicherheitslücken überprüft.
-- [OWASP Dependency-Check](https://owasp.org/www-project-dependency-check/): Ein leistungsstarkes SCA-Tool zur Analyse von Abhängigkeiten in verschiedenen Programmiersprachen.
-- [GitHub Security Features](https://github.com/features/security): GitHub bietet eingebaute Sicherheitsfeatures, einschließlich Abhängigkeits-Scans und SAST.
-- [GitLab Security Features](https://about.gitlab.com/stages-devops-lifecycle/security/): GitLab bietet ebenfalls eine Vielzahl von Sicherheits-Tools, einschließlich SAST und SCA, die in CI/CD-Pipelines integriert werden können.
+#### Erklärung
+Eine bekannte Schwachstelle in Struts2 ([CVE-2017-5638](https://nvd.nist.gov/vuln/detail/CVE-2017-5638)) kann Angreifern die Ausführung beliebigen Codes ermöglichen. SCA-Tools erkennen diese potenziellen Gefahren, indem sie die Versionen der Abhängigkeiten mit bekannten Schwachstellen abgleichen.
+
+### Beispiel 3: Lizenzrisiken
+
+```yaml
+dependencies:
+  - name: openssl
+    version: 1.0.1g
+```
+
+#### Erklärung
+Ein SCA-Tool erkennt möglicherweise, dass `openssl 1.0.1g` eine Lizenz verwendet, die mit den Richtlinien des Unternehmens nicht kompatibel ist. Lizenzrisiken können in vielen Organisationen eine Bedrohung darstellen, da sie zu rechtlichen Problemen führen können.
+
+## Secret Scanning
+
+Secret Scanning zielt darauf ab, vertrauliche Informationen wie API-Schlüssel, Zugangsdaten oder Tokens im Quellcode zu erkennen und zu verhindern, dass diese ungesichert bleiben.
+
+### Beispiel 1: API-Schlüssel im Code
+
+```python
+api_key = "12345-abcdefg-67890-hijklmn"
+```
+
+#### Erklärung
+Secret Scanning-Tools, wie sie beispielsweise GitHub oder Snyk bieten, erkennen hart kodierte API-Schlüssel und warnen den Entwickler, bevor dieser Code in ein öffentliches Repository gelangt.
+
+### Beispiel 2: AWS-Zugangsschlüssel
+
+```bash
+export AWS_ACCESS_KEY_ID="AKIAIOSFODNN7EXAMPLE"
+export AWS_SECRET_ACCESS_KEY="wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+```
+
+#### Erklärung
+Auch hart kodierte Zugangsschlüssel für Cloud-Dienste wie AWS können von Secret Scanning-Tools entdeckt werden. Diese Informationen sollten niemals im Quellcode verbleiben, da sie Angreifern direkten Zugriff auf die Infrastruktur geben könnten.
+
+### Beispiel 3: GitHub Token im Code
+
+```javascript
+const githubToken = "ghp_ABC1234567890"
+```
+
+#### Erklärung
+Ein GitHub-Token im Quellcode stellt eine massive Sicherheitslücke dar, da es Zugriff auf private Repositories oder Automatisierungspipelines ermöglichen könnte. Secret Scanning-Tools durchsuchen den Code nach solchen Tokens und verhindern den versehentlichen Missbrauch.
 
 ## Fazit
 
-SAST und SCA sind wesentliche Komponenten des SSDLC. Während SAST den Quellcode direkt analysiert, konzentriert sich SCA auf die Sicherheit der Abhängigkeiten. Die Nutzung beider Methoden kann dazu beitragen, die Sicherheit der Anwendungen erheblich zu verbessern.
+SAST, SCA und Secret Scanning sind unverzichtbare Werkzeuge, um die Sicherheit von Anwendungen zu gewährleisten. Sie greifen verschiedene Aspekte der Code- und Abhängigkeitsanalyse auf und helfen Entwicklern, Schwachstellen frühzeitig zu erkennen und zu beheben.
 
-Mit den oben genannten Tools können Entwickler frühzeitig Sicherheitslücken erkennen und beheben, bevor sie in die Produktion gelangen. Durch die Integration dieser Tools in den Entwicklungsprozess wird ein höheres Maß an Sicherheit und Qualität in der Softwareentwicklung gewährleistet. Es wird daher empfohlen, genau wie statische Codeanalyse (i.e. Linting) oder UNIT-Tests, diese Tools automatisiert innerhalb einer CI/CD Pipeline zu integrieren.
+### Nützliche Tools:
+
+- **GitHub Security Scans**: Bietet integrierte Funktionen für SAST, SCA und Secret Scanning. [Mehr erfahren](https://docs.github.com/en/code-security/secure-coding).
+- **Dependabot**: Ein GitHub-Dienst, der SCA durch die Überwachung von Abhängigkeiten übernimmt. [Mehr erfahren](https://github.com/dependabot).
+- **OWASP Dependency-Check**: Ein beliebtes Tool zur Analyse von Abhängigkeiten auf bekannte Schwachstellen. [Mehr erfahren](https://owasp.org/www-project-dependency-check/).
+- **Checkmarx**: Bietet eine umfassende SAST-Lösung für die Sicherheitsanalyse von Quellcode. [Mehr erfahren](https://checkmarx.com/).
+- **Snyk**: Ein führendes Tool für SCA und Secret Scanning. [Mehr erfahren](https://snyk.io/).
+
+Durch den Einsatz dieser Tools können Entwickler sicherstellen, dass ihre Anwendungen sicher und widerstandsfähig gegen Angriffe sind.
