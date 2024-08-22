@@ -1,0 +1,119 @@
+body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.circle {
+    position: relative;
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    margin-left: 5vw;
+ 
+    overflow: hidden;
+    background: black;
+}
+
+.segment {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: transparent;
+    border-radius: 0 100% 100% 0;
+    transform-origin: 100% 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #fff; /* Abstand zwischen den Segmenten */
+    color: #fff;
+    font-size: 1.2vw;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: transform 0.3s, filter 0.3s; /* Übergangseffekt */
+}
+
+.segment:hover {
+    filter: brightness(85%);
+}
+
+.segment span {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vw;
+    width: 100%;
+}
+
+
+.planung {
+    background-color: #F4A261;
+    transform: rotate(0deg);
+}
+
+.analyse {
+    background-color: #E76F51;
+    transform: rotate(60deg);
+}
+
+.design {
+    background-color: #D62828;
+    transform: rotate(120deg);
+}
+
+.entwicklung {
+    background-color: #023047;
+    transform: rotate(180deg);
+}
+
+.testen {
+    background-color: #8AB6D6;
+    transform: rotate(240deg);
+}
+
+.wartung {
+    background-color: #2A9D8F;
+    transform: rotate(300deg);
+}
+
+
+.planung span {
+    transform: rotate(-0deg);
+}
+
+.analyse span {
+    transform: rotate(-60deg);
+}
+
+.design span {
+    transform: rotate(-120deg);
+}
+
+.entwicklung span {
+    transform: rotate(-180deg);
+}
+
+.testen span {
+    transform: rotate(-240deg);
+}
+
+.wartung span {
+    transform: rotate(-300deg);
+}
+
+.circle-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+    text-align: center;
+    color: #FFF;
+    font-weight: 700;
+    z-index: 10;
+    pointer-events: none;
+}

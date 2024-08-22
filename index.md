@@ -5,7 +5,7 @@ title: Sichere Entwicklung - by secureIO
 
 # Sicherer Software-Entwicklungszyklus (SSDLC)
 
-<img src="./images/ssdlc.png" class="pure-img-responsive">
+{% include ssdlc.html %}
 
 Der Secure Software Development Life Cycle (SSDLC) ist ein Prozess, der sicherstellt, dass Sicherheitsüberlegungen in jeder Phase der Softwareentwicklung berücksichtigt werden. Dieser Ansatz zielt darauf ab, Sicherheitsprobleme frühzeitig zu erkennen und zu beheben, um die allgemeine Sicherheit und Qualität der Software zu verbessern.
 
