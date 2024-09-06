@@ -310,6 +310,8 @@ footer .wrap {
 }
 
 .sidebar .links {
+  display: flex;
+  flex-direction: column;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.7em;

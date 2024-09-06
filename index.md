@@ -6,12 +6,12 @@ title: Sichere Entwicklung - by secureIO
 # Sicherer Software-Entwicklungszyklus (SSDLC)
 
 <div class="circle">
-  <a href="#planung" class="segment planung"><span>1. Planung</span></a>
-  <a href="#analyse" class="segment analyse"><span>2. Analyse</span></a>
-  <a href="#design" class="segment design"><span>3. Design</span></a>
-  <a href="#entwicklung" class="segment entwicklung"><span>4. Entwicklung</span></a>
-  <a href="#testen" class="segment testen"><span>5. Testen</span></a>
-  <a href="#wartung" class="segment wartung"><span>6. Wartung</span></a>
+  <a href="/pages/planung/" class="segment planung"><span>1. Planung</span></a>
+  <a href="/pages/analyse/" class="segment analyse"><span>2. Analyse</span></a>
+  <a href="/pages/design" class="segment design"><span>3. Design</span></a>
+  <a href="/pages/entwicklung" class="segment entwicklung"><span>4. Entwicklung</span></a>
+  <a href="/pages/testen" class="segment testen"><span>5. Testen</span></a>
+  <a href="/pages/wartung" class="segment wartung"><span>6. Wartung</span></a>
   <div class="circle-text">SSDLC</div>
 </div>
 
