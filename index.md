@@ -19,10 +19,10 @@ In einer Welt, in der Sicherheitsbedrohungen immer präsenter werden, ist es ent
 
 <div class="circle">
   <a href="/pages/1. planung/" class="segment planung"><span>1. Planung</span></a>
-  <a href="/pages/2. design/" class="segment analyse"><span>2. Analyse</span></a>
-  <a href="/pages/3. entwicklung/" class="segment design"><span>3. Design</span></a>
-  <a href="/pages/4. testen" class="segment entwicklung"><span>4. Entwicklung</span></a>
-  <a href="/pages/5. bereitstellung" class="segment testen"><span>5. Testen</span></a>
+  <a href="/pages/2. design/" class="segment analyse"><span>2. Design</span></a>
+  <a href="/pages/3. entwicklung/" class="segment design"><span>3. Entwicklung</span></a>
+  <a href="/pages/4. testen" class="segment entwicklung"><span>4. Testen</span></a>
+  <a href="/pages/5. bereitstellung" class="segment testen"><span>5. Bereitstellug</span></a>
   <a href="/pages/6. wartung" class="segment wartung"><span>6. Wartung</span></a>
   <div class="circle-text">SSDLC</div>
 </div>
