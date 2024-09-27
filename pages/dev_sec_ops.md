@@ -69,5 +69,3 @@ DevSecOps ist ein essenzieller Ansatz, um den steigenden Sicherheitsanforderunge
 - **Bücher**:
   - *Epic Failures in DevSecOps* von Chris Roberts und anderen.
   - *DevSecOps: A leader’s guide to producing secure software without compromising flow, feedback and continuous improvement* von Jim Bird.
-
-[Zurück zur Startseite](./)

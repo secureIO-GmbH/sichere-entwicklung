@@ -18,12 +18,12 @@ Mit unserer visuellen Darstellung des SSDLC kannst du Schritt für Schritt durch
 In einer Welt, in der Sicherheitsbedrohungen immer präsenter werden, ist es entscheidend, Sicherheitsaspekte nicht erst am Ende des Entwicklungsprozesses zu berücksichtigen, sondern von Anfang an. Durch den SSDL-Ansatz integrierst du Sicherheitsmaßnahmen direkt in deinen Entwicklungszyklus, von der Planung bis hin zur Wartung. Und mit [DevSecOps](/pages/dev_sec_ops) stellst du sicher, dass auch der Betrieb kontinuierlich sicher bleibt.
 
 <div class="circle">
-  <a href="/pages/1. planung/" class="segment planung"><span>1. Planung</span></a>
-  <a href="/pages/2. design/" class="segment analyse"><span>2. Design</span></a>
-  <a href="/pages/3. entwicklung/" class="segment design"><span>3. Entwicklung</span></a>
-  <a href="/pages/4. testen" class="segment entwicklung"><span>4. Testen</span></a>
-  <a href="/pages/5. bereitstellung" class="segment testen"><span>5. Bereitstellug</span></a>
-  <a href="/pages/6. wartung" class="segment wartung"><span>6. Wartung</span></a>
+  <a href="/pages/planung/" class="segment planung"><span>1. Planung</span></a>
+  <a href="/pages/design/" class="segment analyse"><span>2. Design</span></a>
+  <a href="/pages/entwicklung/" class="segment design"><span>3. Entwicklung</span></a>
+  <a href="/pages/testen/" class="segment entwicklung"><span>4. Testen</span></a>
+  <a href="/pages/bereitstellung/" class="segment testen"><span>5. Bereitstellug</span></a>
+  <a href="/pages/wartung/" class="segment wartung"><span>6. Wartung</span></a>
   <div class="circle-text">SSDLC</div>
 </div>
 
