@@ -53,22 +53,22 @@ body {
     transform: rotate(0deg);
 }
 
-.analyse {
+.design {
     background-color: #E76F51;
     transform: rotate(60deg);
 }
 
-.design {
+.entwicklung {
     background-color: #D62828;
     transform: rotate(120deg);
 }
 
-.entwicklung {
+.testen {
     background-color: #023047;
     transform: rotate(180deg);
 }
 
-.testen {
+.bereitstellung {
     background-color: #8AB6D6;
     transform: rotate(240deg);
 }
@@ -83,19 +83,19 @@ body {
     transform: rotate(-0deg);
 }
 
-.analyse span {
+.design span {
     transform: rotate(-60deg);
 }
 
-.design span {
+.entwicklung span {
     transform: rotate(-120deg);
 }
 
-.entwicklung span {
+.testen span {
     transform: rotate(-180deg);
 }
 
-.testen span {
+.bereitstellung span {
     transform: rotate(-240deg);
 }
 
