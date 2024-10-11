@@ -11,9 +11,8 @@ Die Testphase beschreibt im [Software Entwicklungslebenszyklus](/pages/...) erst
 Diese Sicherheitstests umfassen innerhalb des *SDLC* aus Zeit und Kostengründen oftmals nur die Überprüfung der allgemeinen Sicherheitsmechanismen, also der implementierten Authentifizierung, Autorisierung und den verwendeten Verschlüsselungsmechanismen. Vielmehr sollte, wie empfohlen durch den *SSDLC*, in der Testphase ein vollumfängliches, *dynamisches Testing* durchgeführt werden. Im Anwendungsfall Software kann das [Dynamic Application Security Testing](/pages/...) Anwendung finden, was unter anderem in Form eines Penetration Test durchgeführt werden kann.
 Zur Unterstützung sind ebenfalls zahlreiche [Dynamic Application Security Testing Tools (DAST Tools)](/pages/dast_tools), sowohl kommerziell als auch Open-Source, verfügbar.
 
-### Folder Structure:
+## Unterseiten
 
-TODO:
 - [Penetration Testing](/pages/testen/methoden/penetration_testing/)
 - [Dynamic Application Security Testing](/pages/testen/methoden/dast/)
 - [Interactive Application Security Testing](/pages/testen/methoden/iast/)
