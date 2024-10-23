@@ -3,7 +3,7 @@ layout: default
 title: Sichere Entwicklung - by secureIO
 ---
 
-## Willkommen bei Sichere-Entwicklung.de!
+# Willkommen bei Sichere-Entwicklung.de!
 
 <div class="circle">
   <a href="/pages/planung/" class="segment planung"><span>1. Planung</span></a>
@@ -15,7 +15,7 @@ title: Sichere Entwicklung - by secureIO
   <div class="circle-text">SSDLC</div>
 </div>
 
-# Deine Einstiegshilfe in den Sicheren Software-Entwicklungszyklus (SSDLC) und DevSecOps
+## Deine Einstiegshilfe in den Sicheren Software-Entwicklungszyklus (SSDLC) und DevSecOps
 
 Als Entwickler weißt du, dass Sicherheit in der Softwareentwicklung oft eine Herausforderung darstellt. Viele wissen nicht, wo sie anfangen sollen, wenn es darum geht, Sicherheitsaspekte systematisch in ihren Entwicklungsprozess zu integrieren. Genau hier möchten wir von der [secureIO](https://www.secure-io.de/) ansetzen.
 

@@ -13,10 +13,30 @@ Als koordiniertes Modell, das sowohl das Risikomanagement als auch die Informati
 
 
 ### Folder Structure: 
-1. GRC
-    1. Governance - Richtlinien
-    2. Risk - Risikomanagement 
-    3. Compliance - Informantionssicherheit
-        1. ISO 27001
-        2. NIST
-        3. ISO 9001
+
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+</script>
+
+
+{% comment %} 
+ToDo - Plan ist das alles dynamisch geladen wird! 
+Mithilfe von site.pages sollte es möglich sein die Ordnerstruktur auszulesen und anschließend dynamisch hier laden zu lassen. 
+Entsprechend muss hierfür jedoch der Code noch implementiert werden
+{% endcomment %}
+
+<div class="mermaid">
+    graph TD
+    GRC[GRC] --> Governance[Governance]
+    GRC --> Risikomanagement[Risikomanagement]
+    GRC --> Compliance[Compliance]
+    Compliance --> ISO27001[ISO27001]
+    Compliance --> NIST[NIST]
+    Compliance --> ISO9001[ISO9001]
+
+    click GRC "grc"
+    click Governance "grc/governance"
+    click Risikomanagement "grc/risikomanagement"
+    click Compliance "grc/compliance"
+</div>
