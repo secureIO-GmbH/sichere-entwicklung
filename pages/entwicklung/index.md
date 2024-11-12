@@ -22,3 +22,16 @@ TODO:
     2. Static Application Security Testing Tools (SAST Tools)
 2.  Sichere Entwicklungspraktiken
     1. Cornucopia
+
+<div class="mermaid">
+    graph TD
+    entwicklung --> sast_sca.md[sast_sca.md]
+    entwicklung --> image_scanning.md[image_scanning.md]
+    entwicklung --> guidelines.md[guidelines.md]
+    entwicklung --> statisches_testing[statisches_testing]
+    click statisches_testing "statisches_testing"
+    entwicklung[entwicklung]
+    statisches_testing --> sast_sca.md[sast_sca.md]
+    statisches_testing --> image_scanning.md[image_scanning.md]
+    statisches_testing[statisches_testing]
+</div>

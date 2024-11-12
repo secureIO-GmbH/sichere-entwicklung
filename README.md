@@ -9,8 +9,11 @@ Ruby muss installiert sein: https://www.ruby-lang.org/de/
 ```
 $ gem install jekyll bundler
 $ bundle install
-$ bundle exec jekyll serve
+$ npm install
+
+$ npm run setup
+$ npm start
 
 # build only
-$ bundle exec jekyll build
+$ npm run build 
 ```

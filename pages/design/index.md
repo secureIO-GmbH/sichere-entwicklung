@@ -17,6 +17,21 @@ Für eine entsprechend sichere Umsetzung der Designphase ist die Erstellung eine
 	2. Threat Modeling Methodologies
 		1. STRIDE
 		3. LINDUUN
-
 3. Attack Trees
 4. Risikomatrix
+
+<div class="mermaid">
+graph TD
+design --> tm_methodologies[tm_methodologies]
+click tm_methodologies "tm_methodologies"
+design --> threat_modeling[threat_modeling]
+click threat_modeling "threat_modeling"
+design[design]
+tm_methodologies[tm_methodologies]
+threat_modeling --> methodologies[methodologies]
+click methodologies "methodologies"
+threat_modeling[threat_modeling]
+methodologies --> linduun.md[linduun.md]
+methodologies --> stride.md[stride.md]
+methodologies[methodologies]
+</div>

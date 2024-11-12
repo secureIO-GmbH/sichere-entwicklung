@@ -14,17 +14,13 @@ Als koordiniertes Modell, das sowohl das Risikomanagement als auch die Informati
 
 ### Folder Structure: 
 
-<script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({ startOnLoad: true });
-</script>
-
 
 {% comment %} 
 ToDo - Plan ist das alles dynamisch geladen wird! 
 Mithilfe von site.pages sollte es möglich sein die Ordnerstruktur auszulesen und anschließend dynamisch hier laden zu lassen. 
 Entsprechend muss hierfür jedoch der Code noch implementiert werden
 {% endcomment %}
+
 
 <div class="mermaid">
     graph TD
