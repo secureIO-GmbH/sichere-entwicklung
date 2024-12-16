@@ -1,6 +1,5 @@
 require 'fileutils'
 
-
 def generate_mermaid(directory, level = 0)
   output = []
   links = []

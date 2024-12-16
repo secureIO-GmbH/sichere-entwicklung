@@ -24,14 +24,10 @@ TODO:
     1. Cornucopia
 
 <div class="mermaid">
-    graph TD
-    entwicklung --> sast_sca.md[sast_sca.md]
-    entwicklung --> image_scanning.md[image_scanning.md]
-    entwicklung --> guidelines.md[guidelines.md]
-    entwicklung --> statisches_testing[statisches_testing]
-    click statisches_testing "statisches_testing"
-    entwicklung[entwicklung]
-    statisches_testing --> sast_sca.md[sast_sca.md]
-    statisches_testing --> image_scanning.md[image_scanning.md]
-    statisches_testing[statisches_testing]
-</div>
+graph TD
+N1 --> N2[Guidelines]
+N1 --> N3[Statisches Testing]
+click N3 "statisches_testing"
+N1[Entwicklung]
+N3 --> N5[Sast Sca]
+N3 --> N6[Image Scanning]

@@ -17,3 +17,12 @@ Zur Unterstützung sind ebenfalls zahlreiche [Dynamic Application Security Testi
 - [Dynamic Application Security Testing](/pages/testen/methoden/dast/)
 - [Interactive Application Security Testing](/pages/testen/methoden/iast/)
 - [Runtime Application Self-Protection](/pages/testen/methoden/rasp/)
+
+
+<div class="mermaid">
+graph TD
+N1[Testen]
+N1 --> N2[Iast]
+N1 --> N3[Rasp]
+N1 --> N4[Penetration Testing]
+N1 --> N5[Dast]
