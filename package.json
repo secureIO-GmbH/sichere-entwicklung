@@ -10,8 +10,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "mermaid": "^11.3.0"
-  }
+  "license": "ISC"
 }
