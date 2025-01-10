@@ -1,0 +1,17 @@
+---
+layout: default
+title: Sitemap
+permalink: /sitemap/
+---
+
+<h1>Website Sitemap</h1>
+
+<ul>
+  {% for page in site.pages %}
+    {% unless page.url == "/sitemap/" %}
+      <li>
+        <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+      </li>
+    {% endunless %}
+  {% endfor %}
+</ul>

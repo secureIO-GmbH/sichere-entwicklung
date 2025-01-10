@@ -3,7 +3,9 @@ layout: default
 title: Sichere Entwicklung - by secureIO
 ---
 
-# Willkommen bei Sichere-Entwicklung.de!
+<link rel="stylesheet" href="{{ "/css/ssdlc.css" | prepend: site.baseurl }}">
+
+## Willkommen bei Sichere-Entwicklung.de!
 
 <div class="circle">
   <a href="/pages/planung/" class="segment planung"><span>1. Planung</span></a>

@@ -7,13 +7,10 @@ Dieses Repo enthält alle Dateien der Website https://sichere-entwicklung.de. Wi
 Ruby muss installiert sein: https://www.ruby-lang.org/de/
 
 ```
-$ gem install jekyll bundler
-$ bundle install
-$ npm install
-
+# run locally
 $ npm run setup
 $ npm start
 
 # build only
-$ npm run build 
+$ npm run build
 ```
