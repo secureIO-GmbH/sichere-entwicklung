@@ -32,7 +32,7 @@ def generate_mermaid(directory, level = 0)
 end
 
 # Verzeichnis angeben (z. B. "docs" oder dein spezifisches Verzeichnis)
-directory_path = File.expand_path("../../../pages/planung", __FILE__)
+directory_path = File.expand_path("../../../pages/bereitstellung", __FILE__)
 mermaid_output = generate_mermaid(directory_path)
 
 # Mermaid-Code ausgeben

@@ -4,8 +4,7 @@ title: "Test"
 date: 2024-07-19
 ---
 
-# TODO
-Inside Threat Modeling - Methodologies
+# Threat Modeling - Methodologies
 
 - [linduun](./linduun)
 - [stride](./stride)
