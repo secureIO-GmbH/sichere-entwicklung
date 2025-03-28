@@ -1,0 +1,14 @@
+{
+  "name": "sichere-entwicklung",
+  "version": "1.0.0",
+  "description": "Dieses Repo enthält alle Dateien der Website https://sichere-entwicklung.de. Wir verwenden[Jekyll](https://jekyllrb.com/).",
+  "main": "index.js",
+  "scripts": {
+    "setup": "gem install jekyll bundler && bundle install && npm install",
+    "start": "bundle exec jekyll serve",
+    "build": "bundle exec jekyll build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
