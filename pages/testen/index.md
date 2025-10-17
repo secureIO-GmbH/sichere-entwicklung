@@ -13,19 +13,8 @@ Diese Sicherheitstests umfassen innerhalb des *SDLC* aus Zeit und Kostengründen
 Als Alternativer Ansatz kann ebenfalls das [Interactive Application Security Tsting]{/pages/testen/interactive_testing/} betrachtet werden, welche das dynamische testing mit dem zuvor aus der Entwicklungsphase besprochenen statischem Testing kombiniert.
 
 
-<div class="mermaid">
-graph TD
-testen --> dynamisches_testing[dynamisches_testing]
-click dynamisches_testing "dynamisches_testing"
-testen --> interactive_testing[interactive_testing]
-click interactive_testing "interactive_testing"
-testen[testen]
-dynamisches_testing --> penetration_testing[penetration_testing]
-click penetration_testing "penetration_testing"
-dynamisches_testing --> dynamische_testing_tools[dynamische_testing_tools]
-click dynamische_testing_tools "dynamische_testing_tools"
-dynamisches_testing[dynamisches_testing]
-penetration_testing[penetration_testing]
-dynamische_testing_tools[dynamische_testing_tools]
-interactive_testing[interactive_testing]
+<div class="mermaid-wrap is-centered">
+  <div class="mermaid">
+  {% include_relative graph.mmd %}
+  </div>
 </div>

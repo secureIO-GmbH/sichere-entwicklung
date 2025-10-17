@@ -1,0 +1,15 @@
+graph TD
+entwicklung --> sichere_entwicklungspraktiken[SICHERE ENTWICKLUNGSPRAKTIKEN]
+sichere_entwicklungspraktiken --> OWASP_GUIDELINES[OWASP GUIDELINES]
+sichere_entwicklungspraktiken --> software_composition_analysis[SOFTWARE COMPOSITION ANALYSIS]
+sichere_entwicklungspraktiken --> statisches_testing[STATISCHES TESTING]
+entwicklung[ENTWICKLUNG]
+sichere_entwicklungspraktiken[SICHERE ENTWICKLUNGSPRAKTIKEN]
+OWASP_GUIDELINES[OWASP GUIDELINES]
+software_composition_analysis[SOFTWARE COMPOSITION ANALYSIS]
+statisches_testing[STATISCHES TESTING]
+click sichere_entwicklungspraktiken "sichere_entwicklungspraktiken"
+click software_composition_analysis "software_composition_analysis"
+click statisches_testing "statisches_testing"
+classDef phaseFill fill:#D62828,color:#FFFFFF,stroke:#000,stroke-width:1.5px;
+class entwicklung,sichere_entwicklungspraktiken,OWASP_GUIDELINES,software_composition_analysis,statisches_testing phaseFill;

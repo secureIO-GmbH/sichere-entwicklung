@@ -1,0 +1,218 @@
+%%{init:{
+  "theme":"dark",
+  "flowchart":{"curve":"basis","nodeSpacing":60,"rankSpacing":90,"htmlLabels":true},
+  "themeVariables":{
+    "primaryColor":"#0b1419",
+    "lineColor":"#ffffff",
+    "primaryTextColor":"#e6e6e6",
+    "fontFamily":"'JetBrains Mono',monospace",
+    "fontSize":"16px"
+  }
+}}%%
+graph LR
+ssdlc_root["SSDLC"]
+style ssdlc_root fill:#ffffff,stroke:#000000,stroke-width:2px,color:#000000
+classDef planung fill:#F4A261,color:#ffffff,stroke:#000,stroke-width:1px;
+classDef design fill:#E76F51,color:#ffffff,stroke:#000,stroke-width:1px;
+classDef entwicklung fill:#D62828,color:#ffffff,stroke:#000,stroke-width:1px;
+classDef testen fill:#023047,color:#ffffff,stroke:#000,stroke-width:1px;
+classDef bereitstellung fill:#8AB6D6,color:#ffffff,stroke:#000,stroke-width:1px;
+classDef wartung fill:#2A9D8F,color:#ffffff,stroke:#000,stroke-width:1px;
+ssdlc_root --> pages_planung[1. PLANUNG]
+class pages_planung planung
+click pages_planung "/pages/planung/"
+ssdlc_root --> pages_design[2. DESIGN]
+class pages_design design
+click pages_design "/pages/design/"
+ssdlc_root --> pages_entwicklung[3. ENTWICKLUNG]
+class pages_entwicklung entwicklung
+click pages_entwicklung "/pages/entwicklung/"
+ssdlc_root --> pages_testen[4. TESTEN]
+class pages_testen testen
+click pages_testen "/pages/testen/"
+ssdlc_root --> pages_bereitstellung[5. BEREITSTELLUNG]
+class pages_bereitstellung bereitstellung
+click pages_bereitstellung "/pages/bereitstellung/"
+ssdlc_root --> pages_wartung[6. WARTUNG]
+class pages_wartung wartung
+click pages_wartung "/pages/wartung/"
+pages_planung_grc[GRC]
+pages_planung_grc_compliance[COMPLIANCE]
+pages_planung_grc_compliance_ai_act[AI ACT]
+pages_planung_grc_compliance_dsgvo[DSGVO]
+pages_planung_grc_compliance_nis2[NIS 2]
+pages_planung_grc_governance[GOVERNANCE]
+pages_planung_grc_governance_iso27001[ISO 27001]
+pages_planung_grc_governance_iso9001[ISO 9001]
+pages_planung_grc_governance_soc2[SOC 2]
+pages_planung_grc_risikomanagement[RISIKOMANAGEMENT]
+pages_planung_grc_risikomanagement_coso_erm[COSO ERM]
+pages_planung_grc_risikomanagement_iso27005[ISO 27005]
+pages_planung_grc_risikomanagement_iso31000[ISO 31000]
+pages_design_attack_trees[ATTACK TREES]
+pages_design_risikomatrix[RISIKOMATRIX]
+pages_design_threat_modeling[THREAT MODELING]
+pages_design_threat_modeling_methodologies[METHODOLOGIES]
+pages_design_threat_modeling_methodologies_linduun_md[LINDUUN]
+pages_design_threat_modeling_methodologies_stride_md[STRIDE]
+pages_design_threat_modeling_threat_modeling_tools[THREAT MODELING TOOLS]
+pages_entwicklung_sichere_entwicklungspraktiken[SICHERE ENTWICKLUNGSPRAKTIKEN]
+pages_entwicklung_sichere_entwicklungspraktiken_owasp_guidelines_md[OWASP GUIDELINES]
+pages_entwicklung_sichere_entwicklungspraktiken_software_composition_analysis[SOFTWARE COMPOSITION ANALYSIS]
+pages_entwicklung_sichere_entwicklungspraktiken_statisches_testing[STATISCHES TESTING]
+pages_testen_dynamisches_testing[DYNAMISCHES TESTING]
+pages_testen_dynamisches_testing_dynamische_testing_tools[DYNAMISCHE TESTING TOOLS]
+pages_testen_dynamisches_testing_penetration_testing[PENETRATION TESTING]
+pages_testen_interactive_testing[INTERACTIVE TESTING]
+pages_bereitstellung_deployment[DEPLOYMENT]
+pages_bereitstellung_deployment_ci_cd_sicherheit_md[CI CD SICHERHEIT]
+pages_bereitstellung_deployment_deployment_haertung_md[DEPLOYMENT HAERTUNG]
+pages_bereitstellung_deployment_rasp_md[RASP]
+pages_bereitstellung_infrastruktur[INFRASTRUKTUR]
+pages_bereitstellung_infrastruktur_container_und_orchestrierung_md[CONTAINER UND ORCHESTRIERUNG]
+pages_bereitstellung_infrastruktur_infrastruktur_als_code_md[INFRASTRUKTUR ALS CODE]
+pages_bereitstellung_infrastruktur_zero_trust_netzwerke_md[ZERO TRUST NETZWERKE]
+pages_bereitstellung_schwachstellenmanagement[SCHWACHSTELLENMANAGEMENT]
+pages_wartung_incident_response_md[INCIDENT RESPONSE]
+pages_wartung_logging_und_alarmierung_md[LOGGING UND ALARMIERUNG]
+pages_wartung_patch_management_md[PATCH MANAGEMENT]
+pages_wartung_sicherheitsueberwachung_md[SICHERHEITSUEBERWACHUNG]
+pages_wartung_todo[TODO]
+pages_wartung_todo_dev_sec_ops_md[DEV SEC OPS]
+pages_wartung_todo_image_scanning_md[IMAGE SCANNING]
+pages_wartung_todo_secret_scanning_md[SECRET SCANNING]
+class pages_planung_grc planung
+class pages_planung_grc_compliance planung
+class pages_planung_grc_compliance_ai_act planung
+class pages_planung_grc_compliance_dsgvo planung
+class pages_planung_grc_compliance_nis2 planung
+class pages_planung_grc_governance planung
+class pages_planung_grc_governance_iso27001 planung
+class pages_planung_grc_governance_iso9001 planung
+class pages_planung_grc_governance_soc2 planung
+class pages_planung_grc_risikomanagement planung
+class pages_planung_grc_risikomanagement_coso_erm planung
+class pages_planung_grc_risikomanagement_iso27005 planung
+class pages_planung_grc_risikomanagement_iso31000 planung
+class pages_design_attack_trees design
+class pages_design_risikomatrix design
+class pages_design_threat_modeling design
+class pages_design_threat_modeling_methodologies design
+class pages_design_threat_modeling_methodologies_linduun_md design
+class pages_design_threat_modeling_methodologies_stride_md design
+class pages_design_threat_modeling_threat_modeling_tools design
+class pages_entwicklung_sichere_entwicklungspraktiken entwicklung
+class pages_entwicklung_sichere_entwicklungspraktiken_owasp_guidelines_md entwicklung
+class pages_entwicklung_sichere_entwicklungspraktiken_software_composition_analysis entwicklung
+class pages_entwicklung_sichere_entwicklungspraktiken_statisches_testing entwicklung
+class pages_testen_dynamisches_testing testen
+class pages_testen_dynamisches_testing_dynamische_testing_tools testen
+class pages_testen_dynamisches_testing_penetration_testing testen
+class pages_testen_interactive_testing testen
+class pages_bereitstellung_deployment bereitstellung
+class pages_bereitstellung_deployment_ci_cd_sicherheit_md bereitstellung
+class pages_bereitstellung_deployment_deployment_haertung_md bereitstellung
+class pages_bereitstellung_deployment_rasp_md bereitstellung
+class pages_bereitstellung_infrastruktur bereitstellung
+class pages_bereitstellung_infrastruktur_container_und_orchestrierung_md bereitstellung
+class pages_bereitstellung_infrastruktur_infrastruktur_als_code_md bereitstellung
+class pages_bereitstellung_infrastruktur_zero_trust_netzwerke_md bereitstellung
+class pages_bereitstellung_schwachstellenmanagement bereitstellung
+class pages_wartung_incident_response_md wartung
+class pages_wartung_logging_und_alarmierung_md wartung
+class pages_wartung_patch_management_md wartung
+class pages_wartung_sicherheitsueberwachung_md wartung
+class pages_wartung_todo wartung
+class pages_wartung_todo_dev_sec_ops_md wartung
+class pages_wartung_todo_image_scanning_md wartung
+class pages_wartung_todo_secret_scanning_md wartung
+pages_planung --> pages_planung_grc
+pages_planung_grc --> pages_planung_grc_compliance
+pages_planung_grc_compliance --> pages_planung_grc_compliance_ai_act
+pages_planung_grc_compliance --> pages_planung_grc_compliance_dsgvo
+pages_planung_grc_compliance --> pages_planung_grc_compliance_nis2
+pages_planung_grc --> pages_planung_grc_governance
+pages_planung_grc_governance --> pages_planung_grc_governance_iso27001
+pages_planung_grc_governance --> pages_planung_grc_governance_iso9001
+pages_planung_grc_governance --> pages_planung_grc_governance_soc2
+pages_planung_grc --> pages_planung_grc_risikomanagement
+pages_planung_grc_risikomanagement --> pages_planung_grc_risikomanagement_coso_erm
+pages_planung_grc_risikomanagement --> pages_planung_grc_risikomanagement_iso27005
+pages_planung_grc_risikomanagement --> pages_planung_grc_risikomanagement_iso31000
+pages_design --> pages_design_attack_trees
+pages_design --> pages_design_risikomatrix
+pages_design --> pages_design_threat_modeling
+pages_design_threat_modeling --> pages_design_threat_modeling_methodologies
+pages_design_threat_modeling_methodologies --> pages_design_threat_modeling_methodologies_linduun_md
+pages_design_threat_modeling_methodologies --> pages_design_threat_modeling_methodologies_stride_md
+pages_design_threat_modeling --> pages_design_threat_modeling_threat_modeling_tools
+pages_entwicklung --> pages_entwicklung_sichere_entwicklungspraktiken
+pages_entwicklung_sichere_entwicklungspraktiken --> pages_entwicklung_sichere_entwicklungspraktiken_owasp_guidelines_md
+pages_entwicklung_sichere_entwicklungspraktiken --> pages_entwicklung_sichere_entwicklungspraktiken_software_composition_analysis
+pages_entwicklung_sichere_entwicklungspraktiken --> pages_entwicklung_sichere_entwicklungspraktiken_statisches_testing
+pages_testen --> pages_testen_dynamisches_testing
+pages_testen_dynamisches_testing --> pages_testen_dynamisches_testing_dynamische_testing_tools
+pages_testen_dynamisches_testing --> pages_testen_dynamisches_testing_penetration_testing
+pages_testen --> pages_testen_interactive_testing
+pages_bereitstellung --> pages_bereitstellung_deployment
+pages_bereitstellung_deployment --> pages_bereitstellung_deployment_ci_cd_sicherheit_md
+pages_bereitstellung_deployment --> pages_bereitstellung_deployment_deployment_haertung_md
+pages_bereitstellung_deployment --> pages_bereitstellung_deployment_rasp_md
+pages_bereitstellung --> pages_bereitstellung_infrastruktur
+pages_bereitstellung_infrastruktur --> pages_bereitstellung_infrastruktur_container_und_orchestrierung_md
+pages_bereitstellung_infrastruktur --> pages_bereitstellung_infrastruktur_infrastruktur_als_code_md
+pages_bereitstellung_infrastruktur --> pages_bereitstellung_infrastruktur_zero_trust_netzwerke_md
+pages_bereitstellung --> pages_bereitstellung_schwachstellenmanagement
+pages_wartung --> pages_wartung_incident_response_md
+pages_wartung --> pages_wartung_logging_und_alarmierung_md
+pages_wartung --> pages_wartung_patch_management_md
+pages_wartung --> pages_wartung_sicherheitsueberwachung_md
+pages_wartung --> pages_wartung_todo
+pages_wartung_todo --> pages_wartung_todo_dev_sec_ops_md
+pages_wartung_todo --> pages_wartung_todo_image_scanning_md
+pages_wartung_todo --> pages_wartung_todo_secret_scanning_md
+click pages_planung_grc "/pages/planung/grc/"
+click pages_planung_grc_compliance "/pages/planung/grc/compliance/"
+click pages_planung_grc_compliance_ai_act "/pages/planung/grc/compliance/ai_act/"
+click pages_planung_grc_compliance_dsgvo "/pages/planung/grc/compliance/dsgvo/"
+click pages_planung_grc_compliance_nis2 "/pages/planung/grc/compliance/nis2/"
+click pages_planung_grc_governance "/pages/planung/grc/governance/"
+click pages_planung_grc_governance_iso27001 "/pages/planung/grc/governance/iso27001/"
+click pages_planung_grc_governance_iso9001 "/pages/planung/grc/governance/iso9001/"
+click pages_planung_grc_governance_soc2 "/pages/planung/grc/governance/soc2/"
+click pages_planung_grc_risikomanagement "/pages/planung/grc/risikomanagement/"
+click pages_planung_grc_risikomanagement_coso_erm "/pages/planung/grc/risikomanagement/coso_erm/"
+click pages_planung_grc_risikomanagement_iso27005 "/pages/planung/grc/risikomanagement/iso27005/"
+click pages_planung_grc_risikomanagement_iso31000 "/pages/planung/grc/risikomanagement/iso31000/"
+click pages_design_attack_trees "/pages/design/attack_trees/"
+click pages_design_risikomatrix "/pages/design/risikomatrix/"
+click pages_design_threat_modeling "/pages/design/threat_modeling/"
+click pages_design_threat_modeling_methodologies "/pages/design/threat_modeling/methodologies/"
+click pages_design_threat_modeling_methodologies_linduun_md "/pages/design/threat_modeling/methodologies/linduun/"
+click pages_design_threat_modeling_methodologies_stride_md "/pages/design/threat_modeling/methodologies/stride/"
+click pages_design_threat_modeling_threat_modeling_tools "/pages/design/threat_modeling/threat_modeling_tools/"
+click pages_entwicklung_sichere_entwicklungspraktiken "/pages/entwicklung/sichere_entwicklungspraktiken/"
+click pages_entwicklung_sichere_entwicklungspraktiken_owasp_guidelines_md "/pages/entwicklung/sichere_entwicklungspraktiken/owasp_guidelines/"
+click pages_entwicklung_sichere_entwicklungspraktiken_software_composition_analysis "/pages/entwicklung/sichere_entwicklungspraktiken/software_composition_analysis/"
+click pages_entwicklung_sichere_entwicklungspraktiken_statisches_testing "/pages/entwicklung/sichere_entwicklungspraktiken/statisches_testing/"
+click pages_testen_dynamisches_testing "/pages/testen/dynamisches_testing/"
+click pages_testen_dynamisches_testing_dynamische_testing_tools "/pages/testen/dynamisches_testing/dynamische_testing_tools/"
+click pages_testen_dynamisches_testing_penetration_testing "/pages/testen/dynamisches_testing/penetration_testing/"
+click pages_testen_interactive_testing "/pages/testen/interactive_testing/"
+click pages_bereitstellung_deployment "/pages/bereitstellung/deployment/"
+click pages_bereitstellung_deployment_ci_cd_sicherheit_md "/pages/bereitstellung/deployment/ci-cd-sicherheit/"
+click pages_bereitstellung_deployment_deployment_haertung_md "/pages/bereitstellung/deployment/deployment-haertung/"
+click pages_bereitstellung_deployment_rasp_md "/pages/bereitstellung/deployment/rasp/"
+click pages_bereitstellung_infrastruktur "/pages/bereitstellung/infrastruktur/"
+click pages_bereitstellung_infrastruktur_container_und_orchestrierung_md "/pages/bereitstellung/infrastruktur/container-und-orchestrierung/"
+click pages_bereitstellung_infrastruktur_infrastruktur_als_code_md "/pages/bereitstellung/infrastruktur/infrastruktur-als-code/"
+click pages_bereitstellung_infrastruktur_zero_trust_netzwerke_md "/pages/bereitstellung/infrastruktur/zero-trust-netzwerke/"
+click pages_bereitstellung_schwachstellenmanagement "/pages/bereitstellung/schwachstellenmanagement/"
+click pages_wartung_incident_response_md "/pages/wartung/incident-response/"
+click pages_wartung_logging_und_alarmierung_md "/pages/wartung/logging-und-alarmierung/"
+click pages_wartung_patch_management_md "/pages/wartung/patch-management/"
+click pages_wartung_sicherheitsueberwachung_md "/pages/wartung/sicherheitsueberwachung/"
+click pages_wartung_todo "/pages/wartung/todo/"
+click pages_wartung_todo_dev_sec_ops_md "/pages/wartung/todo/dev_sec_ops/"
+click pages_wartung_todo_image_scanning_md "/pages/wartung/todo/image_scanning/"
+click pages_wartung_todo_secret_scanning_md "/pages/wartung/todo/secret_scanning/"

@@ -1,0 +1,23 @@
+graph TD
+design --> attack_trees[ATTACK TREES]
+design --> risikomatrix[RISIKOMATRIX]
+design --> threat_modeling[THREAT MODELING]
+threat_modeling --> methodologies[METHODOLOGIES]
+methodologies --> LINDUUN[LINDUUN]
+methodologies --> STRIDE[STRIDE]
+threat_modeling --> threat_modeling_tools[THREAT MODELING TOOLS]
+design[DESIGN]
+attack_trees[ATTACK TREES]
+risikomatrix[RISIKOMATRIX]
+threat_modeling[THREAT MODELING]
+methodologies[METHODOLOGIES]
+LINDUUN[LINDUUN]
+STRIDE[STRIDE]
+threat_modeling_tools[THREAT MODELING TOOLS]
+click attack_trees "attack_trees"
+click risikomatrix "risikomatrix"
+click threat_modeling "threat_modeling"
+click methodologies "methodologies"
+click threat_modeling_tools "threat_modeling_tools"
+classDef phaseFill fill:#E76F51,color:#000000,stroke:#000,stroke-width:1.5px;
+class design,attack_trees,risikomatrix,threat_modeling,methodologies,LINDUUN,STRIDE,threat_modeling_tools phaseFill;

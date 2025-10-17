@@ -3,40 +3,46 @@ layout: default
 title: Sichere Entwicklung - by secureIO
 ---
 
-<link rel="stylesheet" href="{{ "/css/ssdlc.css" | prepend: site.baseurl }}">
+<!-- CSS -->
+<link rel="stylesheet" href="{{ '/css/main.css'  | relative_url }}">
+<link rel="stylesheet" href="{{ '/css/ssdlc.css' | relative_url }}">
 
-## Willkommen bei Sichere-Entwicklung.de!
+<div class="content content-grid">
+  <main class="main">
+    <!-- Headline -->
+    <h1 class="page-title">Willkommen bei Sichere-Entwicklung.de!</h1>
 
-<div class="circle">
-  <a href="/pages/planung/" class="segment planung"><span>1. Planung</span></a>
-  <a href="/pages/design/" class="segment design"><span>2. Design</span></a>
-  <a href="/pages/entwicklung/" class="segment entwicklung"><span>3. Entwicklung</span></a>
-  <a href="/pages/testen/" class="segment testen"><span>4. Testen</span></a>
-  <a href="/pages/bereitstellung/" class="segment bereitstellung"><span>5. Bereitstellug</span></a>
-  <a href="/pages/wartung/" class="segment wartung"><span>6. Wartung</span></a>
-  <div class="circle-text">SSDLC</div>
+    <!-- SSDLC-KREIS (interaktive Navigation) -->
+    <div class="circle-wrap">
+      <div class="circle">
+        <a href="{{ '/pages/planung/'        | relative_url }}" class="segment planung"><span>1. Planung</span></a>
+        <a href="{{ '/pages/design/'         | relative_url }}" class="segment design"><span>2. Design</span></a>
+        <a href="{{ '/pages/entwicklung/'    | relative_url }}" class="segment entwicklung"><span>3. Entwicklung</span></a>
+        <a href="{{ '/pages/testen/'         | relative_url }}" class="segment testen"><span>4. Testen</span></a>
+        <a href="{{ '/pages/bereitstellung/' | relative_url }}" class="segment bereitstellung"><span>5. Bereit-<br>stellung</span></a>
+        <a href="{{ '/pages/wartung/'        | relative_url }}" class="segment wartung"><span>6. Wartung</span></a>
+        <a href="{{ '/pages/ssdlc/'          | relative_url }}" class="center-link" aria-label="SSDLC – Überblick"><span>SSDLC</span></a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Rechte Spalte: News-Blöcke -->
+  <aside class="news" aria-label="Neuigkeiten">
+    <h2 class="news-title">News &amp; Blogposts</h2>
+
+    <article class="card">
+      <h3>Release: Threat-Modeling-Checkliste</h3>
+      <p>Praktische Liste für die Planungsphase. Auf GitHub.</p>
+    </article>
+
+    <article class="card">
+      <h3>Blog: CI/CD Security</h3>
+      <p>Secrets, SBOM &amp; Sigstore in der Pipeline.</p>
+    </article>
+
+    <article class="card">
+      <h3>Event: SecureIO Meetup</h3>
+      <p>Talks zu SSDLC &amp; DevSecOps – Anmeldung offen.</p>
+    </article>
+  </aside>
 </div>
-
-## Deine Einstiegshilfe in den Sicheren Software-Entwicklungszyklus (SSDLC) und DevSecOps
-
-Als Entwickler weißt du, dass Sicherheit in der Softwareentwicklung oft eine Herausforderung darstellt. Viele wissen nicht, wo sie anfangen sollen, wenn es darum geht, Sicherheitsaspekte systematisch in ihren Entwicklungsprozess zu integrieren. Genau hier möchten wir von der [secureIO](https://www.secure-io.de/) ansetzen.
-
-Sichere-Entwicklung.de bietet Dir einen praktischen Einstieg in den Secure Software Development Lifecycle (SSDL). Unser Ziel ist es, dir einfache Methoden und Schritte – sogenannte Low Hanging Fruits – zu zeigen, mit denen du ohne großen Aufwand sicherere Software entwickeln kannst.
-
-Mit unserer visuellen Darstellung des SSDLC kannst du Schritt für Schritt durch alle Phasen der sicheren Entwicklung navigieren. Egal, ob du gerade erst beginnst oder deine bestehenden Prozesse sicherer gestalten möchtest – wir bieten dir hilfreiche Einblicke in bewährte Sicherheitspraktiken.
-
-## Warum SSDLC und DevSecOps?
-
-In einer Welt, in der Sicherheitsbedrohungen immer präsenter werden, ist es entscheidend, Sicherheitsaspekte nicht erst am Ende des Entwicklungsprozesses zu berücksichtigen, sondern von Anfang an. Durch den SSDL-Ansatz integrierst du Sicherheitsmaßnahmen direkt in deinen Entwicklungszyklus, von der Planung bis hin zur Wartung. Und mit [DevSecOps](/pages/dev_sec_ops) stellst du sicher, dass auch der Betrieb kontinuierlich sicher bleibt.
-
-
-## It's Open Source!
-
-Das Projekt ist Open Source! Schau dir [unseren Code auf GitHub](https://github.com/secureIO-GmbH/sichere-entwicklung/) an und hilf mit, die sichere Softwareentwicklung für alle zugänglicher zu machen. Wir freuen uns über Pull Requests und Vorschläge, die die Community voranbringen!
-
-## Weitere Informationen
-
-Um tiefer in die einzelnen Phasen des SSDLC einzutauchen, kannst du auch folgende Seiten besuchen:
-
-- [NIST Secure Software Development Framework](https://csrc.nist.gov/publications/detail/sp/800-218/final)
-- [Microsoft Security Development Lifecycle](https://www.microsoft.com/en-us/securityengineering/sdl)

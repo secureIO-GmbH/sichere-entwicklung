@@ -1,0 +1,25 @@
+graph TD
+bereitstellung --> deployment[DEPLOYMENT]
+deployment --> CI_CD_SICHERHEIT[CI CD SICHERHEIT]
+deployment --> DEPLOYMENT_HAERTUNG[DEPLOYMENT HAERTUNG]
+deployment --> RASP[RASP]
+bereitstellung --> infrastruktur[INFRASTRUKTUR]
+infrastruktur --> CONTAINER_UND_ORCHESTRIERUNG[CONTAINER UND ORCHESTRIERUNG]
+infrastruktur --> INFRASTRUKTUR_ALS_CODE[INFRASTRUKTUR ALS CODE]
+infrastruktur --> ZERO_TRUST_NETZWERKE[ZERO TRUST NETZWERKE]
+bereitstellung --> schwachstellenmanagement[SCHWACHSTELLENMANAGEMENT]
+bereitstellung[BEREITSTELLUNG]
+deployment[DEPLOYMENT]
+CI_CD_SICHERHEIT[CI CD SICHERHEIT]
+DEPLOYMENT_HAERTUNG[DEPLOYMENT HAERTUNG]
+RASP[RASP]
+infrastruktur[INFRASTRUKTUR]
+CONTAINER_UND_ORCHESTRIERUNG[CONTAINER UND ORCHESTRIERUNG]
+INFRASTRUKTUR_ALS_CODE[INFRASTRUKTUR ALS CODE]
+ZERO_TRUST_NETZWERKE[ZERO TRUST NETZWERKE]
+schwachstellenmanagement[SCHWACHSTELLENMANAGEMENT]
+click deployment "deployment"
+click infrastruktur "infrastruktur"
+click schwachstellenmanagement "schwachstellenmanagement"
+classDef phaseFill fill:#8AB6D6,color:#000000,stroke:#000,stroke-width:1.5px;
+class bereitstellung,deployment,CI_CD_SICHERHEIT,DEPLOYMENT_HAERTUNG,RASP,infrastruktur,CONTAINER_UND_ORCHESTRIERUNG,INFRASTRUKTUR_ALS_CODE,ZERO_TRUST_NETZWERKE,schwachstellenmanagement phaseFill;

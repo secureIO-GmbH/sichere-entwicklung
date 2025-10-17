@@ -1,0 +1,16 @@
+graph TD
+testen --> dynamisches_testing[DYNAMISCHES TESTING]
+dynamisches_testing --> dynamische_testing_tools[DYNAMISCHE TESTING TOOLS]
+dynamisches_testing --> penetration_testing[PENETRATION TESTING]
+testen --> interactive_testing[INTERACTIVE TESTING]
+testen[TESTEN]
+dynamisches_testing[DYNAMISCHES TESTING]
+dynamische_testing_tools[DYNAMISCHE TESTING TOOLS]
+penetration_testing[PENETRATION TESTING]
+interactive_testing[INTERACTIVE TESTING]
+click dynamisches_testing "dynamisches_testing"
+click dynamische_testing_tools "dynamische_testing_tools"
+click penetration_testing "penetration_testing"
+click interactive_testing "interactive_testing"
+classDef phaseFill fill:#023047,color:#FFFFFF,stroke:#000,stroke-width:1.5px;
+class testen,dynamisches_testing,dynamische_testing_tools,penetration_testing,interactive_testing phaseFill;
