@@ -12,22 +12,8 @@ Nachdem alle Sicherheitsvorkehrungen innerhalb der vorherigen Schritte implement
 
 <!-- Todo: Noch erklären, welche genauen Sicherheitsprinzipien verfolgt werden -->
 
-<div class="mermaid">
-graph TD
-bereitstellung --> schwachstellenmanagement[schwachstellenmanagement]
-click schwachstellenmanagement "schwachstellenmanagement"
-bereitstellung --> deployment[deployment]
-click deployment "deployment"
-bereitstellung --> infrastruktur[infrastruktur]
-click infrastruktur "infrastruktur"
-bereitstellung[bereitstellung]
-schwachstellenmanagement[schwachstellenmanagement]
-deployment --> deployment-haertung.md[deployment-haertung.md]
-deployment --> ci-cd-sicherheit.md[ci-cd-sicherheit.md]
-deployment --> rasp.md[rasp.md]
-deployment[deployment]
-infrastruktur --> container-und-orchestrierung.md[container-und-orchestrierung.md]
-infrastruktur --> zero-trust-netzwerke.md[zero-trust-netzwerke.md]
-infrastruktur --> infrastruktur-als-code.md[infrastruktur-als-code.md]
-infrastruktur[infrastruktur]
+<div class="mermaid-wrap is-centered">
+  <div class="mermaid">
+  {% include_relative graph.mmd %}
+  </div>
 </div>

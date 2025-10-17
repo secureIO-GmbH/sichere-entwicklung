@@ -12,6 +12,11 @@ Werden neue Funktionalitäten oder Anforderungen für die Software definiert, so
 
 ## Unterseiten
 
+<div class="mermaid-wrap is-centered">
+  <div class="mermaid">
+  {% include_relative graph.mmd %}
+  </div>
+</div>
 
 - [Patch-Management](/pages/wartung/patch-management)
 - [Incident Response](/pages/wartung/incident-response)

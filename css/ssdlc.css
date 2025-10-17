@@ -1,119 +1,77 @@
-body {
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
+/* === SSDLC (Dark) === */
+:root{--seg-gap:clamp(1px,.35vw,3px)}
+
+/* Positionierung */
+.circle-wrap{display:flex;justify-content:flex-start;align-items:center;padding:8px 0 clamp(24px,6vw,64px) 8px}
+
+/* Kreis */
+.circle{
+  position:relative;aspect-ratio:1/1;border-radius:50%;overflow:hidden;background:#000;
+  width:min(62vh,56vw);max-width:720px;
+}
+@media (min-width:1440px){.circle{width:min(66vh,58vw);max-width:820px}}
+@media (min-width:1920px){.circle{width:min(70vh,60vw);max-width:960px}}
+@media (min-width:2560px){.circle{width:min(74vh,62vw);max-width:1100px}}
+@media (min-width:3840px){.circle{width:min(78vh,64vw);max-width:1300px}}
+
+/* Außenring */
+.circle::after{content:"";position:absolute;inset:0;border:var(--seg-gap) solid #000;border-radius:50%;pointer-events:none;z-index:3}
+
+/* Segmente */
+.segment{
+  position:absolute;width:50%;height:50%;border-radius:0 100% 100% 0;transform-origin:100% 100%;
+  display:flex;justify-content:center;align-items:center;text-align:center;color:#fff;z-index:2;
+  border:var(--seg-gap) solid #000;transition:filter .2s;font-size:clamp(13px,1.35vw,19px);line-height:1.25;
+}
+.segment:hover{filter:brightness(85%)}
+.segment span{display:flex;justify-content:center;width:100%;margin-top:4.2vw;padding:0 .35rem}
+
+/* Farben + Rotationen */
+.planung{background:#F4A261;transform:rotate(0deg)}
+.design{background:#E76F51;transform:rotate(60deg)}
+.entwicklung{background:#D62828;transform:rotate(120deg)}
+.testen{background:#023047;transform:rotate(180deg)}
+.bereitstellung{background:#8AB6D6;transform:rotate(240deg)}
+.wartung{background:#2A9D8F;transform:rotate(300deg)}
+.planung span{transform:rotate(0)}
+.design span{transform:rotate(-60deg)}
+.entwicklung span{transform:rotate(-120deg)}
+.testen span{transform:rotate(-180deg)}
+.bereitstellung span{transform:rotate(-240deg)}
+.wartung span{transform:rotate(-300deg)}
+
+/* Zentrum */
+.center-link{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:34%;height:34%;border-radius:50%;background:#fff;color:#000;
+  display:flex;align-items:center;justify-content:center;z-index:1;cursor:pointer;
+  box-shadow:0 0 0 var(--seg-gap) #000;transition:filter .2s,transform .2s;
+}
+.center-link span{font-weight:700;letter-spacing:.02em;font-size:clamp(16px,1.9vw,26px)}
+.center-link:hover{filter:brightness(95%);transform:translate(-50%,-50%) scale(1.02)}
+
+/* Typo-Scaling große Displays */
+@media (min-width:1440px){
+  .segment{font-size:clamp(14px,1.25vw,20px)}
+  .center-link span{font-size:clamp(18px,1.7vw,28px)}
+}
+@media (min-width:1920px){
+  .segment{font-size:clamp(16px,1.15vw,22px)}
+  .center-link span{font-size:clamp(20px,1.5vw,32px)}
+}
+@media (min-width:2560px){
+  .segment{font-size:clamp(18px,1.1vw,24px)}
+  .center-link span{font-size:clamp(22px,1.35vw,36px)}
+}
+@media (min-width:3840px){
+  .segment{font-size:clamp(20px,1vw,26px)}
+  .center-link span{font-size:clamp(24px,1.2vw,40px)}
 }
 
-.circle {
-    position: relative;
-    width: 40vw;
-    height: 40vw;
-    border-radius: 50%;
-    margin-left: 5vw;
- 
-    overflow: hidden;
-    background: black;
-}
-
-.segment {
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    background-color: transparent;
-    border-radius: 0 100% 100% 0;
-    transform-origin: 100% 100%;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: 2px solid #fff; /* Abstand zwischen den Segmenten */
-    color: #fff;
-    font-size: 1.2vw;
-    text-decoration: none;
-    box-sizing: border-box;
-    transition: transform 0.3s, filter 0.3s; /* Übergangseffekt */
-}
-
-.segment:hover {
-    filter: brightness(85%);
-}
-
-.segment span {
-    display: flex;
-    justify-content: center;
-    margin-top: 5vw;
-    width: 100%;
-}
-
-
-.planung {
-    background-color: #F4A261;
-    transform: rotate(0deg);
-}
-
-.design {
-    background-color: #E76F51;
-    transform: rotate(60deg);
-}
-
-.entwicklung {
-    background-color: #D62828;
-    transform: rotate(120deg);
-}
-
-.testen {
-    background-color: #023047;
-    transform: rotate(180deg);
-}
-
-.bereitstellung {
-    background-color: #8AB6D6;
-    transform: rotate(240deg);
-}
-
-.wartung {
-    background-color: #2A9D8F;
-    transform: rotate(300deg);
-}
-
-
-.planung span {
-    transform: rotate(-0deg);
-}
-
-.design span {
-    transform: rotate(-60deg);
-}
-
-.entwicklung span {
-    transform: rotate(-120deg);
-}
-
-.testen span {
-    transform: rotate(-180deg);
-}
-
-.bereitstellung span {
-    transform: rotate(-240deg);
-}
-
-.wartung span {
-    transform: rotate(-300deg);
-}
-
-.circle-text {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2vw;
-    text-align: center;
-    color: #FFF;
-    font-weight: 700;
-    z-index: 10;
-    pointer-events: none;
+/* Small phones */
+@media (max-width:420px){
+  .circle{width:92vw;max-width:none}
+  .segment{font-size:clamp(12px,3.4vw,16px)}
+  .segment span{margin-top:9vw}
+  .center-link span{font-size:clamp(15px,4.8vw,20px)}
 }

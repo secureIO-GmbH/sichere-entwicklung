@@ -1,0 +1,43 @@
+graph TD
+planung --> grc[GRC]
+grc --> compliance[COMPLIANCE]
+compliance --> ai_act[AI ACT]
+compliance --> dsgvo[DSGVO]
+compliance --> nis2[NIS 2]
+grc --> governance[GOVERNANCE]
+governance --> iso27001[ISO 27001]
+governance --> iso9001[ISO 9001]
+governance --> soc2[SOC 2]
+grc --> risikomanagement[RISIKOMANAGEMENT]
+risikomanagement --> coso_erm[COSO ERM]
+risikomanagement --> iso27005[ISO 27005]
+risikomanagement --> iso31000[ISO 31000]
+planung[PLANUNG]
+grc[GRC]
+compliance[COMPLIANCE]
+ai_act[AI ACT]
+dsgvo[DSGVO]
+nis2[NIS 2]
+governance[GOVERNANCE]
+iso27001[ISO 27001]
+iso9001[ISO 9001]
+soc2[SOC 2]
+risikomanagement[RISIKOMANAGEMENT]
+coso_erm[COSO ERM]
+iso27005[ISO 27005]
+iso31000[ISO 31000]
+click grc "grc"
+click compliance "compliance"
+click ai_act "ai_act"
+click dsgvo "dsgvo"
+click nis2 "nis2"
+click governance "governance"
+click iso27001 "iso27001"
+click iso9001 "iso9001"
+click soc2 "soc2"
+click risikomanagement "risikomanagement"
+click coso_erm "coso_erm"
+click iso27005 "iso27005"
+click iso31000 "iso31000"
+classDef phaseFill fill:#F4A261,color:#000000,stroke:#000,stroke-width:1.5px;
+class planung,grc,compliance,ai_act,dsgvo,nis2,governance,iso27001,iso9001,soc2,risikomanagement,coso_erm,iso27005,iso31000 phaseFill;

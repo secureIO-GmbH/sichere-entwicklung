@@ -11,14 +11,38 @@
         import mermaid from '/assets/js/mermaid.esm.min.mjs';
         mermaid.initialize({ startOnLoad: true });
     </script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+    mermaid.initialize({
+        startOnLoad: true,
+        securityLevel: 'loose',
+        theme: 'dark',
+        themeVariables: {
+        fontFamily: 'JetBrains Mono, monospace',
+        fontSize: '18px',            // größer
+        primaryColor:   '#0f1b22',
+        secondaryColor: '#12232b',
+        tertiaryColor:  '#0b151b',
+        primaryTextColor: '#e7f7f7',
+        lineColor: '#cfe7e7',
+        noteBkgColor: '#1b2a33',
+        noteTextColor: '#e7f7f7'
+        },
+        flowchart: {
+        useMaxWidth: true,
+        htmlLabels: true,
+        nodeSpacing: 70,             // mehr Abstand
+        rankSpacing: 65
+        }
+    });
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" href="https://www.secure-io.de/wp-content/uploads/2022/10/cropped-favicon-32x32.png" sizes="32x32" />
     <link rel="icon" href="https://www.secure-io.de/wp-content/uploads/2022/10/cropped-favicon-192x192.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="https://www.secure-io.de/wp-content/uploads/2022/10/cropped-favicon-180x180.png" />
     <link type="text/plain" rel="author" href="https://www.sichere-entwicklung.de/humans.txt" />
-    <link rel="stylesheet" href="{{ "/css/pure.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 </head>

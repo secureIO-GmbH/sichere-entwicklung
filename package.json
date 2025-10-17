@@ -1,14 +1,10 @@
 {
-  "name": "sichere-entwicklung",
-  "version": "1.0.0",
-  "description": "Dieses Repo enthält alle Dateien der Website https://sichere-entwicklung.de. Wir verwenden[Jekyll](https://jekyllrb.com/).",
-  "main": "index.js",
   "scripts": {
     "setup": "gem install jekyll bundler && bundle install && npm install",
-    "start": "bundle exec jekyll serve",
-    "build": "bundle exec jekyll build"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "start": "npm run gen && bundle exec jekyll serve",
+    "build": "npm run gen && bundle exec jekyll build",
+    "gen": "npm run gen:phases && npm run gen:index",
+    "gen:phases": "node scripts/gen-mermaid.js pages/planung --out pages/planung/graph.mmd && node scripts/gen-mermaid.js pages/design --out pages/design/graph.mmd && node scripts/gen-mermaid.js pages/entwicklung --out pages/entwicklung/graph.mmd && node scripts/gen-mermaid.js pages/testen --out pages/testen/graph.mmd && node scripts/gen-mermaid.js pages/bereitstellung --out pages/bereitstellung/graph.mmd && node scripts/gen-mermaid.js pages/wartung --out pages/wartung/graph.mmd",
+    "gen:index": "node scripts/gen-index-mermaid.js pages --out _includes/generated/index-graph.mmd"
+  }
 }
