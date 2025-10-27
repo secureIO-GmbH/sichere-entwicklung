@@ -7,7 +7,7 @@ title: Sichere Entwicklung - by secureIO
 <link rel="stylesheet" href="{{ '/css/main.css'  | relative_url }}">
 <link rel="stylesheet" href="{{ '/css/ssdlc.css' | relative_url }}">
 
-<div class="content content-grid">
+<div class="content-grid home">
   <main class="main">
     <!-- Headline -->
     <h1 class="page-title">Willkommen bei Sichere-Entwicklung.de!</h1>
@@ -30,19 +30,9 @@ title: Sichere Entwicklung - by secureIO
   <aside class="news" aria-label="Neuigkeiten">
     <h2 class="news-title">News &amp; Blogposts</h2>
 
-    <article class="card">
-      <h3>Release: Threat-Modeling-Checkliste</h3>
-      <p>Praktische Liste für die Planungsphase. Auf GitHub.</p>
-    </article>
-
-    <article class="card">
-      <h3>Blog: CI/CD Security</h3>
-      <p>Secrets, SBOM &amp; Sigstore in der Pipeline.</p>
-    </article>
-
-    <article class="card">
-      <h3>Event: SecureIO Meetup</h3>
-      <p>Talks zu SSDLC &amp; DevSecOps – Anmeldung offen.</p>
-    </article>
+    {% assign latest_news = site.news | sort: "date" | reverse | slice: 0, 3 %}
+    {% for item in latest_news %}
+      {% include news-card.html item=item %}
+    {% endfor %}
   </aside>
 </div>

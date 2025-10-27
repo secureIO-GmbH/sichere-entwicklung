@@ -6,6 +6,7 @@ date: 2024-07-19
 
 # GRC
 
+
 <div class="mermaid">
 graph TD
 grc --> compliance[compliance]

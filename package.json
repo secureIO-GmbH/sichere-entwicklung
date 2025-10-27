@@ -1,7 +1,7 @@
 {
   "scripts": {
     "setup": "gem install jekyll bundler && bundle install && npm install",
-    "start": "npm run gen && bundle exec jekyll serve",
+    "start": "npm run gen && bundle exec jekyll serve --livereload --incremental",
     "build": "npm run gen && bundle exec jekyll build",
     "gen": "npm run gen:phases && npm run gen:index",
     "gen:phases": "node scripts/gen-mermaid.js pages/planung --out pages/planung/graph.mmd && node scripts/gen-mermaid.js pages/design --out pages/design/graph.mmd && node scripts/gen-mermaid.js pages/entwicklung --out pages/entwicklung/graph.mmd && node scripts/gen-mermaid.js pages/testen --out pages/testen/graph.mmd && node scripts/gen-mermaid.js pages/bereitstellung --out pages/bereitstellung/graph.mmd && node scripts/gen-mermaid.js pages/wartung --out pages/wartung/graph.mmd",

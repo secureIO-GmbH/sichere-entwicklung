@@ -37,3 +37,16 @@ future: true
 # exclude file while running "jekyll build"
 exclude: [_.*, package.json, README.md, readme.md]
 include: ['_pages']
+
+collections:
+  news:
+    output: true
+    permalink: /news/:title/
+
+# Optional: Default-Layout/Values für News-Posts
+defaults:
+  - scope: { path: "", type: "news" }
+    values:
+      layout: news
+      author: "secureIO"
+      # published: false   # zum Verstecken

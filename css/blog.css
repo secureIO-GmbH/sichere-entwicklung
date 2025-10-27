@@ -1,0 +1,109 @@
+/* ===== Blog/News Detail ===== */
+:root{
+  --aside-col: var(--news-col);
+  --hero-h: clamp(220px, 36vh, 420px);
+  --aside-bg: #eef3f6;        /* hell */
+  --aside-border: #cfd8de;
+}
+
+
+
+/* Hero oben, volle Breite, Cover */
+.post-hero{
+  width: 100%;
+  height: var(--hero-h);
+  background: var(--hero) center / cover no-repeat;
+  border-bottom: 1px solid #11161a;
+}
+
+/* Zwei Spalten: Main | Aside */
+.post-grid{
+  display: grid;
+  grid-template-columns: 1fr var(--aside-col);
+  gap: clamp(16px, 2.6vw, 32px);
+  align-items: start;
+
+  /* minimal innen, damit wir weit links bleiben */
+  padding: clamp(12px, 1.6vw, 18px) var(--pad-side) clamp(20px, 3vw, 36px) var(--pad-left);
+}
+
+.post-title{ margin:.2rem 0 .25rem; color:#fff; font-weight:600; text-wrap:balance; }
+.post-meta{ margin:0 0 1rem; color:#9aa0a6; font-size:.9rem; }
+
+/* Fließtext – gleiche Breite wie auf den anderen Seiten */
+.post-content{ max-width:100%; line-height:1.75; }
+.post-content p{ margin:0 0 1.05rem; }
+.post-content h2{ margin:1.6rem 0 .6rem; text-wrap:balance; }
+.post-content h3{ margin:1.2rem 0 .4rem; }
+
+/* Standard-Bild kleiner + Abstand */
+.post-content img{
+  max-width:80%;
+  height:auto;
+  display:block;
+  margin: .75rem auto;
+  border-radius:10px;
+  box-shadow:0 10px 28px rgba(0,0,0,.35);
+}
+
+/* Figures */
+.post-content figure{ margin:1rem 0; }
+.post-content figcaption{
+  color:#9aa0a6; font-size:.85rem; margin-top:.35rem; text-align:center;
+}
+
+/* Optionen für noch kleinere Bilder */
+.post-content .img-sm img{ max-width:60%; }
+.post-content .img-xs img{ max-width:40%; }
+
+/* „Bild rechts, Text links“ – 2-Spalten-Block */
+.split{
+  display:grid;
+  grid-template-columns: 1.2fr 1fr;   /* Text | Bild */
+  gap: clamp(14px, 2.4vw, 28px);
+  align-items:start;
+  margin: 1.2rem 0;
+}
+.split .split-media img{ width:100%; max-width:100%; margin:0; }
+
+/* Float-Varianten (optional) */
+.post-content .float-right{ float:right; margin:.2rem 0 1rem 1rem; max-width:44%; }
+.post-content .float-left{  float:left;  margin:.2rem 1rem 1rem 0; max-width:44%; }
+@media (max-width:980px){
+  .post-grid{ grid-template-columns: 1fr; }
+  .split{ grid-template-columns: 1fr; }
+  .post-content .float-right,
+  .post-content .float-left{ float:none; margin:.75rem auto; max-width:100%; }
+}
+
+/* ASIDE rechts: volle Viewport-Höhe, sticky */
+.post-aside{ position: sticky; top: var(--pad-top); }
+.aside-viewport{
+  height: calc(100vh - var(--pad-top));
+  display:flex;
+  flex-direction:column;
+}
+.aside-placeholder{
+  background: var(--aside-bg);
+  border:1px solid var(--aside-border);
+  border-radius:14px;
+  padding:16px;
+  color:#0b1419;
+  display:flex; align-items:center; justify-content:center;
+  text-align:center; font-weight:600;
+  flex:1 1 auto;
+}
+
+/* Mermaid im Aside groß */
+.aside-mermaid{
+  flex:1 1 auto;
+  display:flex; align-items:center; justify-content:center;
+  overflow:auto;          /* falls der Graph größer ist */
+}
+.aside-mermaid svg{
+  width: 100% !important;   /* füllt Spaltenbreite */
+  height: auto !important;
+  max-width: 100%;
+}
+
+
